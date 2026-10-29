@@ -1,0 +1,15 @@
+﻿Phạm vi,Căn cứ thực tế,Đề xuất cho giai đoạn sau,Quyết định còn cần
+vle.week_from,"5,243 ô thiếu (82.39%)",Cân nhắc không dùng lịch tuần hoặc giữ thiếu có cấu trúc; chỉ điền khi có căn cứ nghiệp vụ.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+vle.week_to,"5,243 ô thiếu (82.39%)",Đánh giá cùng week_from; không suy diễn tuần kết thúc chỉ từ thống kê chung.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+studentRegistration.date_unregistration,"22,521 ô thiếu (69.10%)",Giữ ý nghĩa không ghi nhận rút học; đối chiếu trạng thái. Không mặc định điền 0 hoặc dùng thông tin tương lai.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+assessments.date,11 ô thiếu (5.34%),Tách ngữ cảnh Exam và bài trong kỳ; không điền ngày chung khi chưa có căn cứ.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+studentInfo.imd_band,"1,111 ô thiếu (3.41%)","Cân nhắc nhóm Unknown hoặc phương án điền phù hợp; so sánh trên train, bảo toàn cờ thiếu nếu có ích.",Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+studentRegistration.date_registration,45 ô thiếu (0.14%),Rà soát từng lượt thiếu; không tự suy diễn ngày hoặc thay bằng 0.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+studentAssessment.score,173 ô thiếu (0.10%),Phân biệt chưa có điểm và điểm 0; chỉ chọn chiến lược khi đã xác minh thời điểm công bố.,Chọn phương án sau khi chốt biến sử dụng và mốc dự đoán
+Trùng toàn dòng,"787,170 dòng dư trong 7 bảng","Nếu xác minh là lỗi ghi nhận mới loại đúng dòng trùng; với log, xem xét quy trình thu thập trước.",Xác nhận ý nghĩa bản ghi lặp
+Giá trị không hợp lệ và khóa ngoại,0 lượt vi phạm miền; 0 lượt không khớp quan hệ,Truy nguyên trường hợp vi phạm trước khi sửa/loại; giữ kiểm tra khóa many-to-one khi nối thống kê.,Chỉ cần can thiệp nếu phát hiện lỗi có căn cứ
+Ngoại lai IQR,"score: 3,813; studied_credits: 350; num_of_prev_attempts: 4,172; sum_click: 1,314,646","Ưu tiên giữ giá trị hợp lệ; cân nhắc log hoặc mô hình bền vững nếu phù hợp, đánh giá trên tập train.",Không cắt IQR tự động; chọn theo mục tiêu mô hình
+IMD: cách ghi nhãn,Nhãn không có hậu tố %: 10-20,"Nếu cần thứ tự nhóm IMD, định nghĩa ánh xạ rõ ràng và lưu từ điển; hiện giữ nguyên nhãn.",Có dùng IMD và xem là thứ bậc hay danh nghĩa
+final_result và chia tập,"4 lớp gốc; 28,785 sinh viên / 32,593 lượt học",Chốt giữ đa lớp hay định nghĩa nhãn khác; cân nhắc chia theo thời gian/đợt học và tránh cùng sinh viên gây rò rỉ giữa các tập.,"Mục tiêu dự đoán, định nghĩa nhãn và đơn vị chia tập"
+Mốc ngày và khả dụng thông tin,"688,988 log trước ngày bắt đầu; 0 log sau thời lượng","Chốt cửa sổ quan sát, xem xét ngày âm; không dùng kết quả cuối kỳ/ngày rút học tương lai làm đầu vào. Ngày nộp không đảm bảo ngày có điểm.","Ngày dự đoán, cửa sổ quan sát và quy tắc khả dụng score"
+"Mã hóa, điền thiếu, chuẩn hóa và tích hợp",43 cột được khảo sát trên 7 bảng,"Chọn biến, tổng hợp đúng đơn vị lượt học; chỉ fit các phép học tham số trên train sau khi chia tập. Chưa triển khai tại đây.",Chưa bắt đầu Chương 3 cho đến khi phạm vi được chốt

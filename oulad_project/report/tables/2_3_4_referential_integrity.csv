@@ -1,0 +1,12 @@
+﻿Bảng con / phạm vi,Bảng cha,Khóa liên kết,Số dòng con,Khóa cha duy nhất và không thiếu,Dòng thiếu khóa con,Dòng không khớp,Tỷ lệ không khớp (%)
+assessments,courses,code_module + code_presentation,206,True,0,0,0.0
+studentInfo,courses,code_module + code_presentation,32593,True,0,0,0.0
+studentRegistration,courses,code_module + code_presentation,32593,True,0,0,0.0
+vle,courses,code_module + code_presentation,6364,True,0,0,0.0
+studentRegistration,studentInfo,code_module + code_presentation + id_student,32593,True,0,0,0.0
+studentInfo,studentRegistration,code_module + code_presentation + id_student,32593,True,0,0,0.0
+studentAssessment,assessments,id_assessment,173912,True,0,0,0.0
+studentAssessment (đã tra đợt học từ assessments),studentInfo,code_module + code_presentation + id_student,173912,True,0,0,0.0
+studentVle (toàn bộ),courses,code_module + code_presentation,10655280,True,0,0,0.0
+studentVle (toàn bộ),studentInfo,code_module + code_presentation + id_student,10655280,True,0,0,0.0
+studentVle (toàn bộ),vle,code_module + code_presentation + id_site,10655280,True,0,0,0.0

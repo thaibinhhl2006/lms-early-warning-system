@@ -1,0 +1,6 @@
+﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
+code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,"Toàn bộ 32,593 dòng"
+code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,"Toàn bộ 32,593 dòng"
+id_student,Mã sinh viên,int64,Định danh,28785,[3733; 2716795],"Toàn bộ 32,593 dòng"
+date_registration,Ngày đăng ký tương đối,float64,Thời gian tương đối,332,[-322.0; 167.0],"Toàn bộ 32,593 dòng"
+date_unregistration,Ngày rút học tương đối,float64,Thời gian tương đối,416,[-365.0; 444.0],"Toàn bộ 32,593 dòng"

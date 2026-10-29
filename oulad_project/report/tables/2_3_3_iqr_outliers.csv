@@ -1,0 +1,5 @@
+﻿Bảng,Cột,Q1,Q3,IQR,Ngưỡng dưới,Ngưỡng trên,Số dưới ngưỡng,Số trên ngưỡng,Số có giá trị,Tỷ lệ ứng viên ngoại lai (%)
+studentAssessment,score,65.0,90.0,25.0,27.5,127.5,3813,0,173739,2.194671317320809
+studentInfo,studied_credits,60.0,120.0,60.0,-30.0,210.0,0,350,32593,1.0738502132359709
+studentInfo,num_of_prev_attempts,0.0,0.0,0.0,0.0,0.0,0,4172,32593,12.800294541772773
+studentVle,sum_click,1.0,3.0,2.0,-2.0,6.0,0,1314646,10655280,12.337977040490724

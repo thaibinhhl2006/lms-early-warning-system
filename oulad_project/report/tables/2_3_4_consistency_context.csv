@@ -1,0 +1,12 @@
+﻿Kiểm tra,Số trường hợp,Mẫu số đã kiểm tra,Tỷ lệ (%),Diễn giải
+Ngày đăng ký sau ngày rút học,0,10033,0.0,Vi phạm thứ tự thời gian; cần truy nguyên
+Có ngày rút học nhưng final_result khác Withdrawn,9,10072,0.08935663224781573,Rà soát ngữ cảnh trạng thái; chưa tự kết luận lỗi
+final_result Withdrawn nhưng thiếu ngày rút,93,10156,0.9157148483654982,Rà soát mức đầy đủ của mốc rút học
+Ngày đăng ký âm,32312,32548,99.2749170455942,Có thể hợp lệ: đăng ký trước ngày bắt đầu
+Ngày rút sau thời lượng đợt học,1,10072,0.009928514694201748,"Rà soát ngữ cảnh hành chính, không tự xóa"
+week_from > week_to,0,1121,0.0,Vi phạm thứ tự tuần nếu có đủ hai mốc
+Log VLE: Trước ngày bắt đầu,688988,10655280,6.466165131277639,"Mốc ngày tương đối; chỉ mô tả, chưa loại dòng"
+Log VLE: Trong thời lượng đợt học,9966292,10655280,93.53383486872237,"Mốc ngày tương đối; chỉ mô tả, chưa loại dòng"
+Log VLE: Sau thời lượng đợt học,0,10655280,0.0,"Mốc ngày tương đối; chỉ mô tả, chưa loại dòng"
+Log VLE: Không xác định,0,10655280,0.0,"Mốc ngày tương đối; chỉ mô tả, chưa loại dòng"
+imd_band: nhãn không có hậu tố % (khác đa số nhóm),3516,31482,11.168286639984753,Khác quy ước nhãn nguồn; chưa chuẩn hóa

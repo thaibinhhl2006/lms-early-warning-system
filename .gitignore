@@ -1,0 +1,124 @@
+# OULAD LMS Early Warning System
+# Keep source, main notebooks, documentation, requirements and report artifacts.
+# Do not ignore all CSVs, all notebooks, all data, or the report/ directory.
+
+# Python environments and locally installed dependencies
+.venv/
+venv/
+env/
+ENV/
+.virtualenv/
+__pypackages__/
+
+# Python bytecode and packaging outputs
+__pycache__/
+*.py[cod]
+*$py.class
+.eggs/
+*.egg-info/
+build/
+dist/
+
+# Jupyter checkpoints, execution caches and local session state
+.ipynb_checkpoints/
+.jupyter_cache/
+.ipython/
+
+# Test, lint, type-check and coverage caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+
+# Temporary work, local notebook backups and logs; retain directory placeholders.
+# Python helpers under tmp/ are temporary tooling, not the project source tree.
+**/tmp/*
+!**/tmp/.gitkeep
+**/temp/*
+!**/temp/.gitkeep
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+logs/
+*.log
+
+# Local credentials and environment secrets (including .env.local, .env.dev).
+# Keep real LMS exports with identifiable students out of the public repository.
+.env
+.env.*
+.aws/
+.ssh/
+.pypirc
+.netrc
+_netrc
+credentials/
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ed25519
+**/data/private/
+**/data/sensitive/
+
+# Local IDE state; allow shareable extension recommendations and task definitions.
+.idea/
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/tasks.json
+*.code-workspace
+
+# Operating-system metadata
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Machine-learning experiment logs and distributed-worker scratch space
+mlruns/
+mlartifacts/
+wandb/
+lightning_logs/
+.tensorboard/
+events.out.tfevents.*
+dask-worker-space/
+ray_results/
+
+# Fitted model binaries only; keep model code, configurations and .gitkeep.
+/oulad_project/models/**/*.pkl
+/oulad_project/models/**/*.pickle
+/oulad_project/models/**/*.joblib
+/oulad_project/models/**/*.h5
+/oulad_project/models/**/*.hdf5
+/oulad_project/models/**/*.keras
+/oulad_project/models/**/*.pt
+/oulad_project/models/**/*.pth
+/oulad_project/models/**/*.onnx
+/oulad_project/models/**/*.ckpt
+/oulad_project/models/**/*.ubj
+/oulad_project/models/**/*.bin
+
+# Data policy: leave the six smaller public OULAD CSVs eligible for Git.
+# studentVle.csv is 453,836,331 bytes (432.81 MiB), above GitHub's 100 MiB limit.
+# Obtain this file separately; Git LFS would require a separate explicit setup.
+# Reference: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+/oulad_project/data/raw/studentVle.csv
+
+# No blanket exclusion for data/preprocessed/: currently only .gitkeep exists.
+# Review future datasets for size and student privacy before choosing to track them.
+# report/tables/*.csv and report/figures/*.png remain eligible for Git.

@@ -1,0 +1,63 @@
+﻿Bảng,Cột,Quy tắc hợp lệ,Số giá trị đã kiểm tra,Số vi phạm,Tỷ lệ vi phạm (%)
+courses,code_module,Mã gồm 3 chữ hoa,22,0,0.0
+courses,code_presentation,Mã năm 20xx và kỳ B/J,22,0,0.0
+courses,module_presentation_length,Số ngày nguyên dương,22,0,0.0
+assessments,code_module,Mã gồm 3 chữ hoa,206,0,0.0
+assessments,code_presentation,Mã năm 20xx và kỳ B/J,206,0,0.0
+assessments,id_assessment,ID nguyên dương,206,0,0.0
+assessments,date,Số ngày tương đối là số nguyên (cho phép âm),195,0,0.0
+assessments,weight,"Giá trị thuộc [0,100]",206,0,0.0
+studentInfo,code_module,Mã gồm 3 chữ hoa,32593,0,0.0
+studentInfo,code_presentation,Mã năm 20xx và kỳ B/J,32593,0,0.0
+studentInfo,id_student,ID nguyên dương,32593,0,0.0
+studentInfo,num_of_prev_attempts,Số nguyên không âm,32593,0,0.0
+studentInfo,studied_credits,Số nguyên không âm,32593,0,0.0
+studentRegistration,code_module,Mã gồm 3 chữ hoa,32593,0,0.0
+studentRegistration,code_presentation,Mã năm 20xx và kỳ B/J,32593,0,0.0
+studentRegistration,id_student,ID nguyên dương,32593,0,0.0
+studentRegistration,date_registration,Số ngày tương đối là số nguyên (cho phép âm),32548,0,0.0
+studentRegistration,date_unregistration,Số ngày tương đối là số nguyên (cho phép âm),10072,0,0.0
+studentAssessment,id_assessment,ID nguyên dương,173912,0,0.0
+studentAssessment,id_student,ID nguyên dương,173912,0,0.0
+studentAssessment,date_submitted,Số ngày tương đối là số nguyên (cho phép âm),173912,0,0.0
+studentAssessment,score,"Giá trị thuộc [0,100]",173739,0,0.0
+vle,id_site,ID nguyên dương,6364,0,0.0
+vle,code_module,Mã gồm 3 chữ hoa,6364,0,0.0
+vle,code_presentation,Mã năm 20xx và kỳ B/J,6364,0,0.0
+vle,week_from,Số tuần nguyên không âm,1121,0,0.0
+vle,week_to,Số tuần nguyên không âm,1121,0,0.0
+studentVle,code_module,Mã gồm 3 chữ hoa,10655280,0,0.0
+studentVle,code_presentation,Mã năm 20xx và kỳ B/J,10655280,0,0.0
+studentVle,id_student,ID nguyên dương,10655280,0,0.0
+studentVle,id_site,ID nguyên dương,10655280,0,0.0
+studentVle,date,Số ngày tương đối là số nguyên (cho phép âm),10655280,0,0.0
+studentVle,sum_click,Số nguyên không âm,10655280,0,0.0
+studentInfo,final_result,"Thuộc tập: Distinction, Fail, Pass, Withdrawn",32593,0,0.0
+studentInfo,gender,"Thuộc tập: F, M",32593,0,0.0
+studentInfo,disability,"Thuộc tập: N, Y",32593,0,0.0
+studentInfo,age_band,"Thuộc tập: 0-35, 35-55, 55<=",32593,0,0.0
+studentInfo,highest_education,"Thuộc tập: A Level or Equivalent, HE Qualification, Lower Than A Level, No Formal quals, Post Graduate Qualification",32593,0,0.0
+assessments,assessment_type,"Thuộc tập: CMA, Exam, TMA",206,0,0.0
+studentAssessment,is_banked,"Thuộc tập: 0, 1",173912,0,0.0
+studentInfo,imd_band,Dải thập phân vị từ 0-10 đến 90-100; hậu tố % tùy cách ghi nguồn,31482,0,0.0
+courses,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,22,0,0.0
+courses,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,22,0,0.0
+assessments,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,206,0,0.0
+assessments,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,206,0,0.0
+assessments,assessment_type,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,206,0,0.0
+studentInfo,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,gender,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,region,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,highest_education,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,imd_band,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,31482,0,0.0
+studentInfo,age_band,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,disability,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentInfo,final_result,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentRegistration,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+studentRegistration,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,32593,0,0.0
+vle,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,6364,0,0.0
+vle,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,6364,0,0.0
+vle,activity_type,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,6364,0,0.0
+studentVle,code_module,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,10655280,0,0.0
+studentVle,code_presentation,Không rỗng / không có khoảng trắng ở đầu hoặc cuối,10655280,0,0.0

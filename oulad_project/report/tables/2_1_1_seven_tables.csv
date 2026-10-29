@@ -1,0 +1,8 @@
+﻿Bảng,Đơn vị quan sát,Nội dung
+courses,Một học phần trong một đợt mở lớp,"Mã học phần, đợt mở lớp và thời lượng (ngày)"
+assessments,Một bài đánh giá,"Loại bài, ngày đến hạn tương đối và trọng số (%)"
+studentInfo,Một lượt học của sinh viên,"Nhân khẩu học, lịch sử học và final_result"
+studentRegistration,Một lượt đăng ký học,Ngày đăng ký và ngày rút học tương đối
+studentAssessment,Một sinh viên nộp một bài đánh giá,"Ngày nộp, cờ chuyển điểm và score (0–100)"
+vle,Một tài nguyên VLE trong đợt học,"Mã tài nguyên, activity_type và lịch tuần"
+studentVle,Một bản ghi tương tác sinh viên–tài nguyên–ngày,Số click trong bản ghi; không mặc định khóa ngày là duy nhất

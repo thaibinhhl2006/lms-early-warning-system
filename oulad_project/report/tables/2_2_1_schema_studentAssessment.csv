@@ -1,0 +1,6 @@
+﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
+id_assessment,Mã bài đánh giá,int64,Định danh,188,[1752; 37443],"Toàn bộ 173,912 dòng"
+id_student,Mã sinh viên,int64,Định danh,23369,[6516; 2698588],"Toàn bộ 173,912 dòng"
+date_submitted,Ngày nộp bài tương đối,int64,Thời gian tương đối,312,[-11; 608],"Toàn bộ 173,912 dòng"
+is_banked,Cờ chuyển điểm từ lần học trước,int64,Phân loại,2,0; 1,"Toàn bộ 173,912 dòng"
+score,Điểm (0–100),float64,Định lượng,101,[0.0; 100.0],"Toàn bộ 173,912 dòng"

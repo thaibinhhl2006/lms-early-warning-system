@@ -1,0 +1,20 @@
+﻿Nhóm vấn đề,Phạm vi,Số lượng,Mẫu số,Tỷ lệ (%),Đơn vị,Đánh giá
+Giá trị thiếu,vle.week_from,5243,6364,82.3852922690132,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,vle.week_to,5243,6364,82.3852922690132,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,studentRegistration.date_unregistration,22521,32593,69.09765900653514,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,assessments.date,11,206,5.339805825242719,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,studentInfo.imd_band,1111,32593,3.4087073911576105,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,studentRegistration.date_registration,45,32593,0.13806645598748196,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Giá trị thiếu,studentAssessment.score,173,173912,0.09947559685358112,ô thiếu / dòng của bảng,Cần phân biệt thiếu cấu trúc và thiếu thông tin
+Trùng toàn dòng,studentVle,787170,10655280,7.387605018357096,dòng dư / dòng của bảng,"Cần xác minh nguồn, chưa xóa"
+Vi phạm miền,62 phép kiểm tra,0,87009229,0.0,lượt vi phạm / lượt kiểm tra,Không phát hiện theo các quy tắc đã áp dụng
+Không khớp quan hệ,11 phép kiểm tra,0,32450606,0.0,lượt vi phạm / lượt kiểm tra,Không phát hiện theo các quy tắc đã áp dụng
+Trùng khóa kỳ vọng,6 phép kiểm tra,0,245690,0.0,lượt vi phạm / lượt kiểm tra,Không phát hiện theo các quy tắc đã áp dụng
+Ứng viên ngoại lai IQR,studentAssessment.score,3813,173739,2.194671317320809,giá trị ngoài ngưỡng / giá trị không thiếu,Cờ thống kê; chưa xác định là lỗi
+Ứng viên ngoại lai IQR,studentInfo.studied_credits,350,32593,1.0738502132359709,giá trị ngoài ngưỡng / giá trị không thiếu,Cờ thống kê; chưa xác định là lỗi
+Ứng viên ngoại lai IQR,studentInfo.num_of_prev_attempts,4172,32593,12.800294541772773,giá trị ngoài ngưỡng / giá trị không thiếu,Cờ thống kê; chưa xác định là lỗi
+Ứng viên ngoại lai IQR,studentVle.sum_click,1314646,10655280,12.337977040490724,giá trị ngoài ngưỡng / giá trị không thiếu,Cờ thống kê; chưa xác định là lỗi
+Cần rà soát ngữ cảnh,Có ngày rút học nhưng final_result khác Withdrawn,9,10072,0.08935663224781573,trường hợp / mẫu số của kiểm tra,Rà soát ngữ cảnh trạng thái; chưa tự kết luận lỗi
+Cần rà soát ngữ cảnh,final_result Withdrawn nhưng thiếu ngày rút,93,10156,0.9157148483654982,trường hợp / mẫu số của kiểm tra,Rà soát mức đầy đủ của mốc rút học
+Cần rà soát ngữ cảnh,Ngày rút sau thời lượng đợt học,1,10072,0.009928514694201748,trường hợp / mẫu số của kiểm tra,"Rà soát ngữ cảnh hành chính, không tự xóa"
+Cần rà soát ngữ cảnh,imd_band: nhãn không có hậu tố % (khác đa số nhóm),3516,31482,11.168286639984753,trường hợp / mẫu số của kiểm tra,Khác quy ước nhãn nguồn; chưa chuẩn hóa

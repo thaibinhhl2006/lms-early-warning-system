@@ -1,0 +1,7 @@
+﻿Bảng,Khóa kỳ vọng,Số dòng,Dòng thiếu thành phần khóa,Dòng thuộc nhóm trùng khóa,Tỷ lệ dòng thuộc nhóm trùng khóa (%)
+courses,code_module + code_presentation,22,0,0,0.0
+assessments,id_assessment,206,0,0,0.0
+studentInfo,code_module + code_presentation + id_student,32593,0,0,0.0
+studentRegistration,code_module + code_presentation + id_student,32593,0,0,0.0
+studentAssessment,id_assessment + id_student,173912,0,0,0.0
+vle,code_module + code_presentation + id_site,6364,0,0,0.0
