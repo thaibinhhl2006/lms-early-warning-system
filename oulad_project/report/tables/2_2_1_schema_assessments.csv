@@ -1,7 +1,7 @@
 ﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
-code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ 206 dòng
-code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ 206 dòng
-id_assessment,Mã bài đánh giá,int64,Định danh,206,[1752; 40088],Toàn bộ 206 dòng
-assessment_type,Loại bài đánh giá,object,Phân loại,3,CMA; Exam; TMA,Toàn bộ 206 dòng
-date,Hạn đánh giá (ngày tương đối),float64,Thời gian tương đối,74,[12.0; 261.0],Toàn bộ 206 dòng
-weight,Trọng số (%),float64,Định lượng,24,0.0; 1.0; 2.0; 3.0; 4.0; 5.0; 6.0; 7.0; 7.5; 8.0; 9.0; 10.0; 12.5; 15.0; 16.0; 17.5; 18.0; 20.0; 22.0; 25.0; 28.0; 30.0; 35.0; 100.0,Toàn bộ 206 dòng
+code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ bảng
+code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ bảng
+id_assessment,Mã bài đánh giá,int64,Định danh,206,[1752; 40088],Toàn bộ bảng
+assessment_type,Loại bài đánh giá,object,Phân loại,3,CMA; Exam; TMA,Toàn bộ bảng
+date,Hạn đánh giá (ngày tương đối),float64,Thời gian tương đối,74,[12.0; 261.0],Toàn bộ bảng
+weight,Trọng số (%),float64,Định lượng,24,0.0; 1.0; 2.0; 3.0; 4.0; 5.0; 6.0; 7.0; 7.5; 8.0; 9.0; 10.0; 12.5; 15.0; 16.0; 17.5; 18.0; 20.0; 22.0; 25.0; 28.0; 30.0; 35.0; 100.0,Toàn bộ bảng

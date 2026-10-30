@@ -1,7 +1,6 @@
 ﻿Loại,Tệp,Nội dung
-Bảng,report/tables/2_1_1_seven_tables.csv,Mô tả 7 bảng OULAD
-Bảng,report/tables/2_1_2_table_size.csv,Quy mô 7 CSV gốc
-Bảng,report/tables/2_1_3_key_catalog.csv,Khóa kỳ vọng và đường liên kết
+Bảng,report/tables/2_1_1_table_size.csv,Nội dung và quy mô 7 bảng OULAD
+Bảng,report/tables/2_1_2_key_catalog.csv,Khóa kỳ vọng và đường liên kết
 Bảng,report/tables/2_2_1_schema_courses.csv,Cấu trúc và miền giá trị – courses
 Bảng,report/tables/2_2_1_schema_assessments.csv,Cấu trúc và miền giá trị – assessments
 Bảng,report/tables/2_2_1_schema_studentInfo.csv,Cấu trúc và miền giá trị – studentInfo
@@ -19,7 +18,7 @@ Bảng,report/tables/2_2_5_activity_type.csv,"Phân phối tài nguyên, bản g
 Bảng,report/tables/2_3_1_missing_all_columns.csv,Kiểm tra thiếu trên mọi cột của 7 bảng
 Bảng,report/tables/2_3_1_missing_by_table.csv,Thiếu dữ liệu theo bảng (đơn vị ô)
 Bảng,report/tables/2_3_1_assessment_date_context.csv,Ngữ cảnh thiếu hạn đánh giá theo loại bài
-Bảng,report/tables/2_3_2_exact_duplicates.csv,Kiểm toán trùng toàn dòng trên 7 bảng
+Bảng,report/tables/2_3_2_exact_duplicates.csv,Kiểm tra bản ghi trùng lặp hoàn toàn trong 7 bảng
 Bảng,report/tables/2_3_2_key_checks.csv,Kiểm tra khóa kỳ vọng của 6 bảng có khóa
 Bảng,report/tables/2_3_3_invalid_values.csv,Kiểm tra miền hợp lệ (không bao gồm NA)
 Bảng,report/tables/2_3_3_iqr_outliers.csv,Ứng viên ngoại lai theo quy tắc Tukey trên dữ liệu thô
@@ -30,7 +29,7 @@ Bảng,report/tables/2_4_1_quality_summary.csv,Tổng hợp kết quả đánh g
 Bảng,report/tables/2_4_2_preprocessing_proposals.csv,Đề xuất tiền xử lý và những quyết định còn mở
 Bảng,report/tables/2_4_2_source_integrity.csv,Đối chiếu SHA-256 của 7 CSV gốc và modeling.ipynb
 Bảng,report/tables/2_4_2_output_inventory.csv,Danh mục bảng và hình đã xuất cho báo cáo
-Hình,report/figures/2_1_3_relationships.png,Sơ đồ quan hệ giữa 7 bảng
+Hình,report/figures/2_1_2_relationships.png,Sơ đồ quan hệ giữa 7 bảng
 Hình,report/figures/2_2_2_final_result.png,Phân phối final_result
 Hình,report/figures/2_2_3_demographics.png,Bốn phân phối nhân khẩu học
 Hình,report/figures/2_2_4_score_distribution.png,Histogram điểm và boxplot theo loại đánh giá

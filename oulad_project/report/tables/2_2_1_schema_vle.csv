@@ -1,7 +1,7 @@
 ﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
-id_site,Mã tài nguyên,int64,Định danh,6364,[526721; 1077905],"Toàn bộ 6,364 dòng"
-code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,"Toàn bộ 6,364 dòng"
-code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,"Toàn bộ 6,364 dòng"
-activity_type,Loại hoạt động VLE,object,Phân loại,20,dataplus; dualpane; externalquiz; folder; forumng; glossary; homepage; htmlactivity; oucollaborate; oucontent; ouelluminate; ouwiki; page; questionnaire; quiz; repeatactivity; resource; sharedsubpage; subpage; url,"Toàn bộ 6,364 dòng"
-week_from,Tuần bắt đầu dự kiến,float64,Thời gian tương đối,30,[0.0; 29.0],"Toàn bộ 6,364 dòng"
-week_to,Tuần kết thúc dự kiến,float64,Thời gian tương đối,30,[0.0; 29.0],"Toàn bộ 6,364 dòng"
+id_site,Mã tài nguyên,int64,Định danh,6364,[526721; 1077905],Toàn bộ bảng
+code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ bảng
+code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ bảng
+activity_type,Loại hoạt động VLE,object,Phân loại,20,dataplus; dualpane; externalquiz; folder; forumng; glossary; homepage; htmlactivity; oucollaborate; oucontent; ouelluminate; ouwiki; page; questionnaire; quiz; repeatactivity; resource; sharedsubpage; subpage; url,Toàn bộ bảng
+week_from,Tuần bắt đầu dự kiến,float64,Thời gian tương đối,30,[0.0; 29.0],Toàn bộ bảng
+week_to,Tuần kết thúc dự kiến,float64,Thời gian tương đối,30,[0.0; 29.0],Toàn bộ bảng

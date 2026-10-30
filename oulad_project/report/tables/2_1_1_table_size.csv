@@ -1,0 +1,9 @@
+﻿Bảng,Nội dung bảng,Số dòng,Số cột,Dung lượng CSV (MiB),Tỷ lệ bản ghi trong 7 bảng (%)
+courses,"Học phần, đợt mở lớp và thời lượng",22,3,0.0005016326904296875,0.00020181690253252694
+assessments,"Bài đánh giá, hạn nộp và trọng số",206,6,0.00782012939453125,0.001889740087350025
+studentInfo,Thông tin sinh viên và kết quả học tập,32593,12,3.301288604736328,0.29899174110193866
+studentRegistration,Ngày đăng ký và ngày rút học phần,32593,5,1.058563232421875,0.29899174110193866
+studentAssessment,Ngày nộp bài và điểm đánh giá,173912,5,5.426702499389648,1.5953809615107644
+vle,"Tài nguyên, loại hoạt động và lịch tuần",6364,6,0.2480754852294922,0.05838012580531825
+studentVle,Nhật ký tương tác và số lượt nhấp,10655280,6,432.8120527267456,97.74616387349016
+Tổng,Cộng 7 bảng; có cột trùng tên,10900970,43,442.8550043106079,100.0

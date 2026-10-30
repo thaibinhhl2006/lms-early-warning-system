@@ -1,7 +1,7 @@
 ﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
-code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,"Toàn bộ 10,655,280 dòng"
-code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,"Toàn bộ 10,655,280 dòng"
-id_student,Mã sinh viên,int64,Định danh,26074,[6516; 2698588],"Toàn bộ 10,655,280 dòng"
-id_site,Mã tài nguyên,int64,Định danh,6268,[526721; 1049562],"Toàn bộ 10,655,280 dòng"
-date,Ngày tương tác tương đối,int64,Thời gian tương đối,295,[-25; 269],"Toàn bộ 10,655,280 dòng"
-sum_click,Số click trong bản ghi,int64,Định lượng,498,[1; 6977],"Toàn bộ 10,655,280 dòng"
+code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ bảng
+code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ bảng
+id_student,Mã sinh viên,int64,Định danh,26074,[6516; 2698588],Toàn bộ bảng
+id_site,Mã tài nguyên,int64,Định danh,6268,[526721; 1049562],Toàn bộ bảng
+date,Ngày tương tác tương đối,int64,Thời gian tương đối,295,[-25; 269],Toàn bộ bảng
+sum_click,Số click trong bản ghi,int64,Định lượng,498,[1; 6977],Toàn bộ bảng

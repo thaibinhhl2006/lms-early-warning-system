@@ -1,4 +1,4 @@
 ﻿Cột,Ý nghĩa / đơn vị,Kiểu Pandas,Vai trò,Số giá trị khác nhau,Miền quan sát (không tính thiếu),Phạm vi
-code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ 22 dòng
-code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ 22 dòng
-module_presentation_length,Thời lượng đợt học (ngày),int64,Định lượng,7,234; 240; 241; 261; 262; 268; 269,Toàn bộ 22 dòng
+code_module,Mã học phần,object,Định danh,7,AAA; BBB; CCC; DDD; EEE; FFF; GGG,Toàn bộ bảng
+code_presentation,Mã đợt mở lớp,object,Định danh,4,2013B; 2013J; 2014B; 2014J,Toàn bộ bảng
+module_presentation_length,Thời lượng đợt học (ngày),int64,Định lượng,7,234; 240; 241; 261; 262; 268; 269,Toàn bộ bảng

@@ -6,8 +6,8 @@ Bản sao lưu giữ nguyên byte của notebook ban đầu, bao gồm Chương 
 
 ## Kiểm tra thực thi
 
-- Đã kiểm tra cú pháp mọi ô Python và đúng thứ tự 4 mục chính, 14 tiểu mục.
-- Đã chạy thành công toàn bộ 15 ô Code từ kernel mới; 0 ô đầu ra lỗi.
+- Đã kiểm tra cú pháp mọi ô Python và đúng thứ tự 4 mục chính, 13 tiểu mục.
+- Luồng phân tích đã chạy thành công từ kernel mới; 0 ô đầu ra lỗi. Các chỉnh sửa trình bày sau đó được kiểm tra riêng trên số liệu đã kiểm chứng.
 - Nhật ký VLE gồm 10,655,280 dòng được khảo sát toàn bộ theo khối 250.000 dòng, không dùng mẫu đầu tệp.
 - Kiểm tra trùng toàn dòng qua 64 phân vùng tạm, so sánh chính xác mọi cột và tính cả trùng xuyên khối. Phân vùng tạm đã tự dọn.
 - Hàm phân vị từ tần suất đã đối chiếu độc lập với NumPy trên mọi điểm score có giá trị; trung bình và độ lệch chuẩn khớp Pandas.
@@ -39,16 +39,15 @@ Các PNG được lưu ở 220 dpi.
 | vle | week_from | 5243 | 82.3852922690132 |
 | vle | week_to | 5243 | 82.3852922690132 |
 
-## Danh mục đầy đủ 31 bảng thống kê và 7 hình
+## Danh mục đầy đủ 30 bảng thống kê và 7 hình
 
 Các tệp dưới đây tính đường dẫn từ thư mục oulad_project.
 Một số tệp hình gồm nhiều ô biểu đồ có liên quan để tiện sử dụng trong báo cáo.
 
 | Loại | Tệp | Nội dung |
 | --- | --- | --- |
-| Bảng | report/tables/2_1_1_seven_tables.csv | Mô tả 7 bảng OULAD |
-| Bảng | report/tables/2_1_2_table_size.csv | Quy mô 7 CSV gốc |
-| Bảng | report/tables/2_1_3_key_catalog.csv | Khóa kỳ vọng và đường liên kết |
+| Bảng | report/tables/2_1_1_table_size.csv | Nội dung và quy mô 7 bảng OULAD |
+| Bảng | report/tables/2_1_2_key_catalog.csv | Khóa kỳ vọng và đường liên kết |
 | Bảng | report/tables/2_2_1_schema_courses.csv | Cấu trúc và miền giá trị – courses |
 | Bảng | report/tables/2_2_1_schema_assessments.csv | Cấu trúc và miền giá trị – assessments |
 | Bảng | report/tables/2_2_1_schema_studentInfo.csv | Cấu trúc và miền giá trị – studentInfo |
@@ -66,7 +65,7 @@ Một số tệp hình gồm nhiều ô biểu đồ có liên quan để tiện
 | Bảng | report/tables/2_3_1_missing_all_columns.csv | Kiểm tra thiếu trên mọi cột của 7 bảng |
 | Bảng | report/tables/2_3_1_missing_by_table.csv | Thiếu dữ liệu theo bảng (đơn vị ô) |
 | Bảng | report/tables/2_3_1_assessment_date_context.csv | Ngữ cảnh thiếu hạn đánh giá theo loại bài |
-| Bảng | report/tables/2_3_2_exact_duplicates.csv | Kiểm toán trùng toàn dòng trên 7 bảng |
+| Bảng | report/tables/2_3_2_exact_duplicates.csv | Kiểm tra bản ghi trùng lặp hoàn toàn trong 7 bảng |
 | Bảng | report/tables/2_3_2_key_checks.csv | Kiểm tra khóa kỳ vọng của 6 bảng có khóa |
 | Bảng | report/tables/2_3_3_invalid_values.csv | Kiểm tra miền hợp lệ (không bao gồm NA) |
 | Bảng | report/tables/2_3_3_iqr_outliers.csv | Ứng viên ngoại lai theo quy tắc Tukey trên dữ liệu thô |
@@ -77,7 +76,7 @@ Một số tệp hình gồm nhiều ô biểu đồ có liên quan để tiện
 | Bảng | report/tables/2_4_2_preprocessing_proposals.csv | Đề xuất tiền xử lý và những quyết định còn mở |
 | Bảng | report/tables/2_4_2_source_integrity.csv | Đối chiếu SHA-256 của 7 CSV gốc và modeling.ipynb |
 | Bảng | report/tables/2_4_2_output_inventory.csv | Danh mục bảng và hình đã xuất cho báo cáo |
-| Hình | report/figures/2_1_3_relationships.png | Sơ đồ quan hệ giữa 7 bảng |
+| Hình | report/figures/2_1_2_relationships.png | Sơ đồ quan hệ giữa 7 bảng |
 | Hình | report/figures/2_2_2_final_result.png | Phân phối final_result |
 | Hình | report/figures/2_2_3_demographics.png | Bốn phân phối nhân khẩu học |
 | Hình | report/figures/2_2_4_score_distribution.png | Histogram điểm và boxplot theo loại đánh giá |
