@@ -1,4 +1,4 @@
-﻿Bảng,Nội dung bảng,Số dòng,Số cột,Dung lượng CSV (MiB),Tỷ lệ bản ghi trong 7 bảng (%)
+﻿Bảng dữ liệu,Nội dung bảng,Số bản ghi,Số cột,Dung lượng (MiB),Tỷ lệ bản ghi trong 7 bảng (%)
 courses,"Học phần, đợt mở lớp và thời lượng",22,3,0.0005016326904296875,0.00020181690253252694
 assessments,"Bài đánh giá, hạn nộp và trọng số",206,6,0.00782012939453125,0.001889740087350025
 studentInfo,Thông tin sinh viên và kết quả học tập,32593,12,3.301288604736328,0.29899174110193866

@@ -1,0 +1,7 @@
+﻿Cột dữ liệu,Vai trò,Điều kiện sử dụng thông tin
+final_result,Nhãn y,Không đưa vào X; không dùng để quyết định cohort
+date_registration,Điều kiện cohort và đặc trưng nền,Phải biết và <= cutoff
+date_unregistration,Chỉ điều kiện cohort,Không xuất vào tập đặc trưng theo tuần
+score,Chỉ kiểm toán dữ liệu nguồn,Không dùng do thiếu ngày công bố điểm
+"date_submitted, studentVle.date",Thời điểm sự kiện,Chỉ dùng sự kiện ngày 0..cutoff
+assessments.date,Hạn nộp để xét muộn,Chỉ xét hạn xác định và <= cutoff

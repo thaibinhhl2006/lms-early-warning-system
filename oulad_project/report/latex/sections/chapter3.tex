@@ -1,0 +1,191 @@
+\chapter{Tiền xử lý và tích hợp dữ liệu OULAD}
+\label{chap:preprocess}
+
+\section{Xác định phạm vi và phương án tiền xử lý}
+Đơn vị phân tích là một lượt học tại một mốc dự đoán. Nhãn \(y\) là \code{final_result}, giữ nguyên \code{Pass}, \code{Distinction}, \code{Fail}, \code{Withdrawn}; nhãn không được đưa vào \(X\) hoặc dùng để xác định ai còn tham gia ở một mốc quá khứ. Bảng~\ref{tab:cutoffs} quy định năm cửa sổ quan sát; hai đầu mút đều được tính.
+
+\begin{table}[tbp]
+\centering
+\caption{Các mốc dự đoán và cửa sổ quan sát dùng chung.}
+\label{tab:cutoffs}
+\input{generated/cutoffs}
+\sourcenote{\code{3_1_2_prediction_config.csv}}
+\end{table}
+
+Tại ngày chốt \(t\), lượt học được chọn khi ngày đăng ký đã biết, không sau \(t\), và không có ghi nhận rút vào hoặc trước \(t\). Ngày rút bằng \(t\) được xem là đã rút. Nếu thiếu ngày rút, quy trình tạm giữ lượt học khi ngày đăng ký hợp lệ: đây là giả định \emph{chưa ghi nhận rút}, không phải xác nhận sinh viên thực tế chưa rút.
+
+Đặc trưng sự kiện chỉ sử dụng ngày 0 đến \(t\). Ngày rút trong tương lai không được đưa vào \(X\). Hạn nộp và ngày nộp không chứng minh điểm đã được công bố, nên không dùng \code{score}. Thông tin nền và lịch hạn nộp được xem là đã biết trong bối cảnh lượt học; OULAD không có lịch sử chỉnh sửa để xác minh tuyệt đối giả định này. Đây là giới hạn cần lưu khi áp dụng mô hình lên LMS thực tế.
+
+\section{Xử lý giá trị thiếu}
+Bảng~\ref{tab:missing-actions} ghi đúng các thao tác đã thực hiện trên bản sao. Chỉ nhóm IMD được thay giá trị thiếu bằng một nhãn cố định; không có bước điền trung bình, trung vị hoặc mô hình ước lượng.
+
+\begin{table}[tbp]
+\centering
+\caption{Quyết định và kết quả xử lý các thuộc tính có giá trị thiếu.}
+\label{tab:missing-actions}
+\input{generated/missing_actions}
+\sourcenote{\code{3_2_4_missing_before_after.csv} và các quyết định trong notebook}
+\end{table}
+
+Có \NImdUnknown{} ô IMD được gán \code{Unknown}, đồng thời tạo \code{imd_band_missing}=1; các ô có thông tin ban đầu nhận cờ 0. Đây là cách biểu diễn tình trạng thiếu, không khôi phục được nhóm IMD thực tế. Bảng cơ sở vẫn giữ \NEnrollments{} lượt học.
+
+\NUnknownRegistration{} lượt thiếu ngày đăng ký vẫn được lưu ở cơ sở nhưng không tham gia năm bộ dự đoán. Điểm, ngày rút, hạn nộp và lịch tuần còn thiếu được giữ nguyên theo quyết định. Những giá trị này không nhất thiết xuất hiện trong \(X\): nhiều cột chỉ phục vụ kiểm tra hoặc lọc nhóm, còn điểm và lịch tuần không được dùng làm đầu vào hiện tại.
+
+\section{Xử lý dữ liệu trùng lặp, không hợp lệ và ngoại lai}
+Không có bản ghi nào bị xóa vì trùng hoặc ngoại lai. \NExactDuplicates{} dòng VLE dư trùng hoàn toàn được giữ do chưa xác minh là lỗi thu thập; các tổng click kế thừa chính sách này. Sáu bảng có khóa kỳ vọng không có trùng khóa, nên không cần loại dòng để bảo đảm khóa duy nhất.
+
+Không phát hiện giá trị vi phạm theo \NDomainRules{} phép kiểm tra miền, vì vậy không sửa hoặc loại giá trị theo nhóm này. Ngày âm vẫn được giữ trong bảng làm việc. Khi tổng hợp sự kiện, loại ngày ngoài cửa sổ là quyết định phạm vi dự đoán, không phải khẳng định dữ liệu sai.
+
+Với ba thuộc tính dùng cho đầu vào hoặc tạo đầu vào là \code{studied_credits}, \code{num_of_prev_attempts}, \code{sum_click}, các ứng viên ngoại lai ở Bảng~\ref{tab:outliers} được giữ nguyên. Riêng điểm đã khảo sát ở Chương 2 nhưng không tạo đặc trưng điểm ở Chương 3. Chưa cắt ngưỡng, winsorize hay biến đổi thang đo dữ liệu đầu vào; nếu cần, các phương án này phải được đánh giá sau khi chia tập.
+
+\section{Chuẩn hóa cấu trúc và định dạng dữ liệu}
+\subsection{Chuẩn hóa kiểu dữ liệu}
+Mã dạng số, ngày/tuần, các số đếm và cờ được chuyển sang \code{Int64}, có khả năng lưu giá trị thiếu. Nhãn được lưu bằng \code{string}; điểm và trọng số giữ kiểu số phù hợp. Trước khi ép số nguyên, code kiểm tra không có phần thập phân; sau chuyển đổi đối chiếu lại giá trị và vị trí thiếu.
+
+CSV không lưu khai báo kiểu dữ liệu. Vì vậy \code{float64} lúc đọc có thể do Pandas suy ra khi một cột số nguyên có ô trống, không đồng nghĩa người tạo dữ liệu muốn ngày có phần lẻ. Việc chuyển kiểu là lựa chọn biểu diễn nhất quán; không phải mọi cột đều bắt buộc đổi, và đây không phải chuẩn hóa thang đo cho mô hình.
+
+\subsection{Chuẩn hóa nhãn phân loại}
+Có \NImdLabels{} giá trị \code{10-20} được thống nhất thành \texttt{10-20\%} về mặt trình bày nhóm IMD; nhóm khoảng không thay đổi. Quy tắc bỏ khoảng trắng đầu/cuối chuỗi được kiểm tra nhưng thực tế làm thay đổi \NWhitespaceChanges{} giá trị. Bốn nhãn mục tiêu giữ nguyên; chưa mã hóa nhãn hoặc One-Hot Encoding.
+
+\subsection{Quy tắc sử dụng thuộc tính thời gian}
+Ngày 0 là ngày bắt đầu đợt học; ngày đăng ký âm vẫn có thể hợp lệ. Không chuyển số ngày tương đối thành ngày lịch. Quy tắc chọn lượt học theo ngày chốt đã nêu ở mục~3.1; việc lọc sự kiện được áp dụng trực tiếp trước tổng hợp ở mục~3.5. Hạn nộp không phải ngày công bố điểm.
+\FloatBarrier
+
+\section{Tích hợp dữ liệu và xây dựng tập dữ liệu tổng hợp}
+\label{sec:integration}
+Mục tiêu là đưa thông tin rải rác về cùng một dòng cho mỗi lượt học ở mỗi mốc. Quy trình không ghép trực tiếp toàn bộ bài nộp và log thô vào bảng cơ sở: hai bảng đều có nhiều dòng cho một lượt học, nên cách ghép đó có thể nhân dòng và đếm lặp. Hình~\ref{fig:pipeline} trình bày thứ tự thực hiện.
+
+\begin{figure}[tbp]
+\centering
+\begin{tikzpicture}[
+  block/.style={draw=Navy!65,fill=Pale,rounded corners=2pt,text width=4.15cm,minimum height=1.55cm,align=center,inner sep=5pt,font=\small},
+  join/.style={block,text width=13.8cm,minimum height=1.2cm,fill=Teal!7,draw=Teal},
+  flow/.style={-{Latex[length=2.4mm]},thick,draw=Navy!70}]
+\node[block] (rawa) at (-5.1,0) {\code{studentInfo}\\\code{studentRegistration}\\\code{courses}};
+\node[block] (rawb) at (0,0) {\code{studentAssessment}\\\code{assessments}};
+\node[block] (rawc) at (5.1,0) {\code{studentVle}\\\code{vle}};
+\node[block] (base) at (-5.1,-2.2) {\textbf{Thông tin nền}\\\code{student_base}: \NEnrollments{} lượt\\11 đặc trưng nền};
+\node[block] (assess) at (0,-2.2) {\textbf{Bài nộp}\\Lọc thời gian, tổng hợp\\4 đặc trưng theo lượt học/mốc};
+\node[block] (vle) at (5.1,-2.2) {\textbf{Tương tác VLE}\\Lọc thời gian, tổng hợp\\8 đặc trưng theo lượt học/mốc};
+\node[join] (merge) at (0,-4.5) {\textbf{Chọn lượt học đủ điều kiện tại từng mốc}\\Ghép ba nhóm theo mã học phần + mã đợt học + mã sinh viên};
+\node[join] (result) at (0,-6.4) {\textbf{Năm bộ dữ liệu: tuần 4, 8, 12, 16, 24}\\29 cột = 23 đặc trưng X + 3 mã định danh + 2 cột mốc + 1 nhãn y};
+\draw[flow] (rawa)--(base);
+\draw[flow] (rawb)--(assess);
+\draw[flow] (rawc)--(vle);
+\draw[flow] (base.south)--(base.south |- merge.north);
+\draw[flow] (assess)--(merge);
+\draw[flow] (vle.south)--(vle.south |- merge.north);
+\draw[flow] (merge)--(result);
+\end{tikzpicture}
+\caption{Luồng tích hợp thực tế: tổng hợp trước, hợp nhất sau, kiểm soát theo ngày chốt.}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Tích hợp thông tin sinh viên, đăng ký và học phần}
+\code{studentInfo} và \code{studentRegistration} ghép một--một theo khóa lượt học. Kết quả ghép với \code{courses} theo mã học phần--đợt học để bổ sung thời lượng. Bảng trung gian \code{student_base} có \NEnrollments{} dòng và \NBaseColumns{} cột, không trùng khóa hoặc có dòng không liên kết được. Bảng này giữ toàn bộ lượt học để truy vết, chưa phải bảng cuối đưa vào mô hình.
+
+Nhóm dự đoán được chọn riêng ở từng mốc. Tuần 4 giữ \NWeekFour{} lượt học sau khi loại \NUnknownRegistration{} lượt thiếu ngày đăng ký, \NLateRegistrationWeekFour{} lượt đăng ký sau mốc và \NWithdrawnByWeekFour{} lượt đã rút tại mốc. Tuần 24 còn \NWeekTwentyFour{} lượt, với \NWithdrawnByWeekTwentyFour{} lượt đã rút. Đây là thay đổi phạm vi cần dự đoán, không phải xóa các lượt này khỏi dữ liệu cơ sở.
+
+\subsection{Tổng hợp dữ liệu bài nộp theo mốc dự đoán}
+Tra \code{assessments} bằng \code{id_assessment} để bổ sung học phần, đợt học, loại bài và hạn nộp. Sau đó đối chiếu đủ khóa lượt học. Chỉ giữ sự kiện TMA/CMA có \code{is_banked}=0, ngày nộp từ 0 đến ngày chốt. Exam và kết quả chuyển từ lần học trước không được coi là bài nộp thông thường trong cửa sổ này.
+
+Gọi \(S_t\) là tập bài nộp đủ điều kiện trên và \(D_t\subseteq S_t\) là những bài có hạn xác định, hạn không sau \(t\). Bốn đặc trưng gồm số bài \(|S_t|\), số bài \(|D_t|\), số bài trong \(D_t\) được nộp sau hạn, và tỷ lệ:
+\[
+\text{Tỷ lệ nộp muộn tại }t=
+\begin{cases}
+\dfrac{\text{số bài nộp muộn trong }D_t}{|D_t|},& |D_t|>0,\\[6pt]
+\text{NA},& |D_t|=0.
+\end{cases}
+\]
+Mẫu số không phải toàn bộ bài được giao hoặc toàn bộ bài đã nộp. Một bài nộp sớm nhưng có hạn sau ngày chốt vẫn có thể góp vào số bài nộp, chưa góp vào mẫu số xét muộn. Mỗi mốc tạo một bảng đặc trưng bao phủ khóa của bảng cơ sở; nếu không có sự kiện đủ điều kiện, các số đếm bằng 0, còn tỷ lệ không tính được giữ NA.
+
+\subsection{Tổng hợp dữ liệu tương tác VLE theo mốc dự đoán}
+Nhật ký được đọc theo khối \num{250000} dòng. Mỗi dòng trong cửa sổ ngày 0--167 được tra khóa lượt học và tài nguyên trong đúng học phần--đợt học. Cache lưu tổng click theo ngày, dấu loại hoạt động và click theo tuần cho các loại được chọn; không giữ cả bảng hơn mười triệu dòng trong RAM. Tổng dung lượng các mảng cache là khoảng \num{86.54} MiB, không phải tổng RAM của tiến trình.
+
+Tại mỗi mốc, tạo tổng click, số ngày hoạt động khác nhau, số loại hoạt động khác nhau, click bình quân mỗi ngày và click riêng cho \code{oucontent}, \code{forumng}, \code{quiz}, \code{resource}. Tổng click và số loại hoạt động bao phủ các loại ghi nhận, không chỉ bốn loại có cột click riêng. Số ngày/loại được đếm phân biệt xuyên khối, không cộng trực tiếp số lượng riêng của từng khối.
+
+Đặc trưng bình quân được định nghĩa:
+\[
+\text{\code{avg_clicks_per_day}}=\frac{\text{\code{total_clicks}}}{t+1}.
+\]
+Mẫu số là toàn bộ ngày lịch từ 0 đến \(t\), gồm ngày không có tương tác; không phải chỉ số ngày hoạt động. Đây là lựa chọn ứng viên, chưa phải kết quả tối ưu loại hoạt động bằng thực nghiệm mô hình.
+
+\subsection{Xác định bộ đặc trưng đầu vào ban đầu và hợp nhất dữ liệu}
+Ba nhóm có 11, 4 và 8 đặc trưng, tổng cộng 23 cột của \(X\). Cần phân biệt nguồn hình thành:
+\begin{itemize}
+\item \textbf{9 thuộc tính gốc giữ lại}: đặc điểm sinh viên, lịch sử học, số tín chỉ, ngày đăng ký và thời lượng đợt học.
+\item \textbf{1 thuộc tính được biến đổi cách biểu diễn}: \code{imd_band} với Unknown và hậu tố phần trăm thống nhất.
+\item \textbf{13 đặc trưng tạo thêm}: 1 cờ thiếu IMD, 4 đặc trưng bài nộp và 8 đặc trưng VLE.
+\end{itemize}
+Vì vậy không gọi tất cả 23 cột là đặc trưng mới. Danh sách đầy đủ và nguồn gốc từng cột được đưa vào Phụ lục~\ref{app:features}; đây là bộ ứng viên ban đầu, chưa thực hiện Feature Selection.
+
+Sau khi mỗi nhóm có một dòng/lượt học/mốc, hợp nhất theo khóa lượt học và giữ nhóm đủ điều kiện tại mốc đó. Bảng~\ref{tab:integrated} trình bày kết quả. Mỗi tệp có 29 cột: 23 cột X, 3 cột định danh, \code{prediction_week}, \code{cutoff_day} và nhãn \code{final_result}. Năm cột định danh/mốc vẫn được lưu để chia tập và gắn dự đoán về đúng lượt học, nhưng hiện không nằm trong X.
+
+\begin{table}[tbp]
+\centering
+\caption{Quy mô năm bộ dữ liệu sau hợp nhất các nhóm đặc trưng.}
+\label{tab:integrated}
+\input{generated/integrated}
+\sourcenote{\code{3_5_4_integration_summary.csv}}
+\end{table}
+
+\subsection{Kiểm tra kết quả tích hợp}
+Nhật ký ghi \NMergeChecks{} phép ghép: hai phép tạo cơ sở, một phép tra bài đánh giá và mười phép bổ sung hai nhóm đặc trưng cho năm mốc. Tất cả giữ nguyên số bản ghi trước/sau và liên kết 100\%; không có dòng không khớp. Tỷ lệ liên kết này không có nghĩa mọi lượt học đều phát sinh hoạt động, vì bảng đặc trưng đã bao phủ các khóa cơ sở với số đếm 0 khi không có sự kiện.
+
+Nếu khóa không khớp hoặc bảng tra cứu không duy nhất, code dừng thay vì thay kết quả thiếu bằng 0. Sau ghép, chỉ \code{late_submission_rate} được chấp nhận thiếu khi mẫu số bằng 0. Ở tuần 8 có \NMissingLateRateWeekEight{} trường hợp này (\PctMissingLateRateWeekEight); không gán thành 0\% vì sẽ đánh đồng không tính được tỷ lệ với có bài nhưng không bài nào muộn.
+\FloatBarrier
+
+\section{Kiểm tra và đánh giá dữ liệu sau tiền xử lý}
+\subsection{Đánh giá chất lượng dữ liệu sau xử lý}
+Kết quả đã lưu cho thấy \NFinalChecks{} kiểm tra cuối ở năm mốc đều đạt, gồm khóa duy nhất/đầy đủ, nhãn khớp nguồn, đúng nhóm lượt học, giới hạn ngày, miền số đếm và giá trị thiếu có lý do. Bảng~\ref{tab:final-checks} tóm lược bằng chứng quan trọng.
+
+\begin{table}[tbp]
+\centering
+\caption{Các kiểm tra quan trọng trên dữ liệu tích hợp.}
+\label{tab:final-checks}
+\begin{tabularx}{\linewidth}{@{}p{4.3cm}Yp{2.0cm}@{}}
+\toprule
+\textbf{Nội dung} & \textbf{Phạm vi} & \textbf{Kết quả} \\
+\midrule
+Chất lượng bộ dữ liệu cuối & \NFinalChecks{} điều kiện trên năm mốc & Đều đạt \\
+Ảnh hưởng của thông tin tương lai & \NFutureChecks{} phép thử: VLE, bài nộp, nhóm được chọn & Đều đạt \\
+Giá trị thiếu sau hợp nhất & Chỉ tỷ lệ nộp muộn khi mẫu số bằng 0 & Đúng quy tắc \\
+Đọc lại dữ liệu đã xuất & Sáu CSV: kiểm tra số dòng/cột, khóa, nhãn và giá trị & Đạt \\
+\bottomrule
+\end{tabularx}
+\sourcenote{\code{3_6_1_quality_checks.csv}, \code{3_6_1_future_invariance.csv}, \code{3_5_5_missing_features.csv} và kiểm tra xuất dữ liệu}
+\end{table}
+
+Phép thử thông tin tương lai thực hiện trên bản sao: thay click sau mốc, đẩy ngày nộp/hạn sau mốc xa hơn và thay ngày rút vốn sau mốc. Đặc trưng tại mốc và nhóm được chọn phải giữ nguyên. VLE được thử trên bảy lượt học đối chiếu ở cả năm mốc; bài nộp và điều kiện đăng ký được đối chiếu trên dữ liệu tương ứng đầy đủ. Đây là kiểm tra cho các tình huống đã thử, không phải chứng minh tuyệt đối không còn mọi dạng rò rỉ, đặc biệt khi thiếu thời điểm công bố điểm và lịch sử cập nhật thông tin nền.
+
+\subsection{So sánh dữ liệu trước và sau tiền xử lý}
+Bảng cơ sở giữ nguyên \NEnrollments{} lượt học; chỉ số lượt được chọn vào từng bộ dự đoán thay đổi như Bảng~\ref{tab:integrated}. Không xóa hàng loạt vì thiếu IMD, thiếu điểm hoặc vượt ngưỡng Tukey. Thay đổi giá trị thực tế gồm \NImdUnknown{} ô IMD chuyển thành Unknown, thêm cờ thiếu và chuẩn hóa \NImdLabels{} cách viết nhãn. Không có dòng trùng hoặc giá trị ngoại lai nào được sửa/xóa.
+
+\subsection{Khảo sát các đặc trưng tổng hợp sau tiền xử lý}
+Hình~\ref{fig:week8} mô tả theo lượt học ở tuần 8, khác với \code{sum_click} theo dòng log ở Chương 2. Trung vị tổng click là \WeekEightClickMedian, P95 là \WeekEightClickPninetyfive{} click; độ lệch phải \WeekEightClickSkew{} dẫn đến dùng log1p chỉ trên hình, không biến đổi dữ liệu xuất.
+\reportfigure[.31]{3_6_3_week8_interaction_distributions.png}{Phân phối tổng click và số ngày hoạt động của \NWeekEight{} lượt học tại tuần 8.}{fig:week8}
+Trung vị ngày hoạt động là \WeekEightActiveMedian{} trên 56 ngày; \WeekEightInactivePct{} lượt học không có ngày hoạt động. Giá trị lớn nhất là \WeekEightActiveMax{}, không vượt cửa sổ quan sát. Số click hoặc ngày hoạt động bằng 0 có nghĩa không ghi nhận hoạt động trong cửa sổ đã định nghĩa, chưa đủ kết luận sinh viên không học bằng hình thức khác.
+
+\begin{table}[tbp]
+\centering
+\caption{Lượt học chưa có bài nộp đủ điều kiện tại từng mốc.}
+\label{tab:zero-submissions}
+\input{generated/zero_submissions}
+\sourcenote{\code{3_6_3_zero_submissions.csv}}
+\end{table}
+Tỷ lệ chưa có bài nộp trong Bảng~\ref{tab:zero-submissions} giảm từ \PctZeroSubWeekFour{} xuống \PctZeroSubWeekTwentyFour. Mẫu số là nhóm được chọn tại từng mốc; không dùng chung toàn bộ \NEnrollments{} lượt học. Cửa sổ dài hơn và nhóm lượt học thay đổi, vì vậy không diễn giải như tiến độ của một nhóm cố định.
+
+Trung vị \code{avg_clicks_per_day} ở Hình~\ref{fig:daily} giảm từ \WeekFourDailyMedian{} ở tuần 4 xuống \WeekTwentyFourDailyMedian{} click/ngày ở tuần 24. Chỉ số đã chia cho số ngày lịch nên phù hợp hơn tổng click tích lũy khi so sánh cửa sổ dài khác nhau; tuy nhiên vẫn là bình quân tích lũy trên các nhóm có thể thay đổi, không thể suy ra mọi sinh viên đều giảm tương tác.
+\reportfigure[.34]{3_6_3_median_daily_clicks_by_week.png}{Trung vị số click bình quân mỗi ngày trên nhóm lượt học tại từng mốc.}{fig:daily}
+
+\subsection{Lưu dữ liệu theo từng mốc dự đoán}
+Các tệp trong Bảng~\ref{tab:exports} được lưu ở \code{data/preprocessed/}, cùng \code{feature_manifest.json} mô tả cột X, nhãn, mã định danh, mốc và các giả định sử dụng. CSV được đọc lại theo schema đã xuất để đối chiếu giá trị và thiếu; tệp gốc trong \code{data/raw/} không bị ghi đè.
+\begin{table}[tbp]
+\centering
+\caption{Các bộ dữ liệu đầu ra đã được lưu.}
+\label{tab:exports}
+\input{generated/exports}
+\sourcenote{\code{3_6_4_exports.csv}}
+\end{table}
+\code{student_base.csv} phục vụ truy vết, không phải toàn bộ X để huấn luyện. Các tệp theo tuần vẫn chứa nhãn phân loại dạng chữ và tỷ lệ muộn có thể thiếu; chúng chưa sẵn sàng cho mọi thuật toán nếu chưa có quy trình chia tập, mã hóa và xử lý thiếu phù hợp.
+\FloatBarrier

@@ -1,0 +1,3 @@
+﻿Cột dữ liệu,Số giá trị thiếu,Phương án xử lý
+date_registration,45,Giữ trống ngày đăng ký trong bảng cơ sở; không đưa lượt học vào các tập dự đoán theo tuần.
+date_unregistration,22521,Giữ trống ngày rút; vẫn đưa vào nhóm dự đoán nếu đã biết ngày đăng ký và ngày đó không sau mốc.

@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-31T00:32:32.785714+07:00",
+  "observation_unit": [
+    "code_module",
+    "code_presentation",
+    "id_student"
+  ],
+  "target_column": "final_result",
+  "target_labels": [
+    "Pass",
+    "Distinction",
+    "Fail",
+    "Withdrawn"
+  ],
+  "id_columns": [
+    "code_module",
+    "code_presentation",
+    "id_student"
+  ],
+  "metadata_columns": [
+    "prediction_week",
+    "cutoff_day"
+  ],
+  "feature_columns": [
+    "gender",
+    "region",
+    "highest_education",
+    "imd_band",
+    "age_band",
+    "num_of_prev_attempts",
+    "studied_credits",
+    "disability",
+    "imd_band_missing",
+    "date_registration",
+    "module_presentation_length",
+    "n_submissions",
+    "n_submissions_with_due_date",
+    "n_late_submissions",
+    "late_submission_rate",
+    "total_clicks",
+    "active_days",
+    "resource_types_used",
+    "avg_clicks_per_day",
+    "clicks_oucontent",
+    "clicks_forumng",
+    "clicks_quiz",
+    "clicks_resource"
+  ],
+  "prediction_config": [
+    {
+      "prediction_week": 4,
+      "window_start_day": 0,
+      "cutoff_day": 27
+    },
+    {
+      "prediction_week": 8,
+      "window_start_day": 0,
+      "cutoff_day": 55
+    },
+    {
+      "prediction_week": 12,
+      "window_start_day": 0,
+      "cutoff_day": 83
+    },
+    {
+      "prediction_week": 16,
+      "window_start_day": 0,
+      "cutoff_day": 111
+    },
+    {
+      "prediction_week": 24,
+      "window_start_day": 0,
+      "cutoff_day": 167
+    }
+  ],
+  "csv_dtypes": {
+    "code_module": "string",
+    "code_presentation": "string",
+    "id_student": "Int64",
+    "prediction_week": "int64",
+    "cutoff_day": "int64",
+    "gender": "string",
+    "region": "string",
+    "highest_education": "string",
+    "imd_band": "string",
+    "age_band": "string",
+    "num_of_prev_attempts": "Int64",
+    "studied_credits": "Int64",
+    "disability": "string",
+    "imd_band_missing": "Int64",
+    "date_registration": "Int64",
+    "module_presentation_length": "Int64",
+    "n_submissions": "int64",
+    "n_submissions_with_due_date": "int64",
+    "n_late_submissions": "int64",
+    "late_submission_rate": "float64",
+    "total_clicks": "int64",
+    "active_days": "int64",
+    "resource_types_used": "int64",
+    "avg_clicks_per_day": "float64",
+    "clicks_oucontent": "int64",
+    "clicks_forumng": "int64",
+    "clicks_quiz": "int64",
+    "clicks_resource": "int64",
+    "final_result": "string"
+  },
+  "student_base_dtypes": {
+    "code_module": "string",
+    "code_presentation": "string",
+    "id_student": "Int64",
+    "gender": "string",
+    "region": "string",
+    "highest_education": "string",
+    "imd_band": "string",
+    "age_band": "string",
+    "num_of_prev_attempts": "Int64",
+    "studied_credits": "Int64",
+    "disability": "string",
+    "final_result": "string",
+    "imd_band_missing": "Int64",
+    "date_registration": "Int64",
+    "date_unregistration": "Int64",
+    "module_presentation_length": "Int64"
+  },
+  "missing_feature_policy": {
+    "late_submission_rate": "NA iff n_submissions_with_due_date == 0"
+  },
+  "eligibility": "known date_registration <= cutoff and (date_unregistration missing or > cutoff); no final_result used",
+  "vle_duplicate_policy": "Preserve exact duplicates; not confirmed collection errors",
+  "assessment_policy": "TMA/CMA, is_banked=0, date_submitted in 0..cutoff; lateness uses known due date <= cutoff; no score",
+  "avg_clicks_per_day_definition": "total_clicks / (cutoff_day+1), all calendar days in the configured window",
+  "availability_assumptions": [
+    "Enrollment covariates and module duration treated as baseline attributes; no change-history timestamps provided",
+    "Assessment due dates treated as the course schedule; publication/revision history is unavailable",
+    "Missing withdrawal date treated as no recorded withdrawal at cutoff; historical state may be incomplete"
+  ],
+  "raw_sha256": {
+    "data\\raw\\courses.csv": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75",
+    "data\\raw\\assessments.csv": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1",
+    "data\\raw\\studentInfo.csv": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+    "data\\raw\\studentRegistration.csv": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170",
+    "data\\raw\\studentAssessment.csv": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e",
+    "data\\raw\\vle.csv": "d1b28303dea802ad87b4484e1196e878e06824850b9a4fe8aa34693439fe87e9",
+    "data\\raw\\studentVle.csv": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0"
+  },
+  "datasets": [
+    {
+      "Tệp": "data/preprocessed/student_base.csv",
+      "Số dòng": 32593,
+      "Số cột": 16,
+      "Dung lượng (MiB)": 2.9381160736083984,
+      "SHA-256": "7c873d695203f6ca8d0be0e413adb29215a901dbe8d2f401389cb9161ac48d9d"
+    },
+    {
+      "Tệp": "data/preprocessed/oulad_week4.csv",
+      "Số dòng": 27528,
+      "Số cột": 29,
+      "Dung lượng (MiB)": 3.7048139572143555,
+      "SHA-256": "8a523de9e50b94b6ed429de2e39a51f916dc820c20534f1710e7484905be521a"
+    },
+    {
+      "Tệp": "data/preprocessed/oulad_week8.csv",
+      "Số dòng": 26516,
+      "Số cột": 29,
+      "Dung lượng (MiB)": 3.6302385330200195,
+      "SHA-256": "b087f254adabbdd7e7f8ca3e58a12abe9b274c0a717976729e161de7261332c6"
+    },
+    {
+      "Tệp": "data/preprocessed/oulad_week12.csv",
+      "Số dòng": 25722,
+      "Số cột": 29,
+      "Dung lượng (MiB)": 3.6463003158569336,
+      "SHA-256": "e8d821611c3e90d71a03857cf33a0ec9ace11136a76f4291a9fb2d89bae765fc"
+    },
+    {
+      "Tệp": "data/preprocessed/oulad_week16.csv",
+      "Số dòng": 24932,
+      "Số cột": 29,
+      "Dung lượng (MiB)": 3.515859603881836,
+      "SHA-256": "3ae930a2e782860f7a6bc3cd0bd87277184b61ebec72d2e11586e1596d7b32ba"
+    },
+    {
+      "Tệp": "data/preprocessed/oulad_week24.csv",
+      "Số dòng": 23562,
+      "Số cột": 29,
+      "Dung lượng (MiB)": 3.3775854110717773,
+      "SHA-256": "5b0982057efed61f5ce0edcc6411d8f386181a75f3bd685e6644dc3cddbbaec6"
+    }
+  ]
+}

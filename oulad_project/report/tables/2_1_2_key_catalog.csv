@@ -1,4 +1,4 @@
-﻿Bảng,Khóa kỳ vọng,Liên kết chính
+﻿Bảng dữ liệu,Khóa kỳ vọng,Liên kết chính
 courses,code_module + code_presentation,Bảng cha của học phần–đợt học
 assessments,id_assessment,courses qua code_module + code_presentation
 studentInfo,code_module + code_presentation + id_student,courses qua code_module + code_presentation

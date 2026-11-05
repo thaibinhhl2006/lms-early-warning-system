@@ -1,0 +1,8 @@
+﻿Bảng dữ liệu,Cột dữ liệu,Số giá trị thiếu trước xử lý,Số giá trị thiếu sau xử lý,Phương án đã áp dụng
+studentInfo,imd_band,1111,0,Nhóm Unknown và cờ imd_band_missing
+studentRegistration,date_registration,45,45,Giữ trống ngày đăng ký trong bảng cơ sở; không đưa lượt học vào các tập dự đoán theo tuần.
+studentRegistration,date_unregistration,22521,22521,Giữ trống ngày rút; vẫn đưa vào nhóm dự đoán nếu đã biết ngày đăng ký và ngày đó không sau mốc.
+studentAssessment,score,173,173,Giữ NA; không dùng bất kỳ score nào làm đặc trưng
+assessments,date,11,11,Giữ NA; bỏ khỏi mẫu số xét muộn khi hạn không xác định
+vle,week_from,5243,5243,Giữ NA; không dùng lịch tuần dự kiến làm đặc trưng
+vle,week_to,5243,5243,Giữ NA; không dùng lịch tuần dự kiến làm đặc trưng

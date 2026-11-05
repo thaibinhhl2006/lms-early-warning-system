@@ -1,0 +1,19 @@
+\chapter*{Kết quả thực hiện và hướng triển khai tiếp theo}
+\phantomsection
+\addcontentsline{toc}{chapter}{Kết quả thực hiện và hướng triển khai tiếp theo}
+
+Tuần 3 đã hệ thống lại việc khảo sát bảy bảng, phân tích phân phối, đánh giá chất lượng và ghi rõ quyết định xử lý theo ngữ cảnh. Quy trình ở mục~\ref{sec:integration} tạo bảng cơ sở \NEnrollments{} lượt học và năm bộ dữ liệu theo thời gian, mỗi bộ có 29 cột với 23 đặc trưng ứng viên. Phần khảo sát sau tích hợp làm rõ sự khác nhau giữa tương tác trên bản ghi log và tương tác tổng hợp theo lượt học.
+
+Những giới hạn cần giữ khi chuyển sang mô hình hóa gồm: chưa xác minh các dòng VLE trùng là lỗi; thiếu ngày rút có thể làm sai lệch nhóm được chọn; không có ngày công bố điểm; và không có lịch sử thay đổi các thuộc tính nền/lịch đánh giá. Tỷ lệ nộp muộn chưa tính được vẫn được giữ thiếu. Bộ 23 đặc trưng chưa được chứng minh tối ưu hoặc đủ sức dự đoán.
+
+Các bước tiếp theo được triển khai theo thứ tự:
+\begin{enumerate}
+\item \textbf{Chia Train/Validation/Test}: ưu tiên phản ánh khả năng dự đoán cho đợt mới và kiểm soát việc cùng sinh viên xuất hiện ở nhiều tập; chốt chiến lược theo câu hỏi nghiên cứu.
+\item \textbf{Phân tích và lựa chọn đặc trưng}: thực hiện trên tập huấn luyện; đánh giá vai trò của từng nhóm và các lựa chọn còn mở như thông tin học phần.
+\item \textbf{Xây dựng pipeline mã hóa và xử lý thiếu}: One-Hot Encoding khi phù hợp, có quy tắc cho nhóm mới; không đánh đồng tỷ lệ muộn không xác định với 0.
+\item \textbf{Chuẩn hóa thang đo nếu mô hình cần}: học tham số từ tập huấn luyện rồi áp dụng sang các tập còn lại.
+\item \textbf{Huấn luyện mô hình và đối chiếu phương án}: chưa có kết quả mô hình trong phạm vi báo cáo này.
+\item \textbf{Đánh giá khả năng cảnh báo sớm tại năm mốc}: báo cáo theo lớp và thời điểm, cân nhắc sự thay đổi thành phần lượt học giữa các mốc.
+\end{enumerate}
+
+Chưa có thực nghiệm huấn luyện, do đó không báo cáo Accuracy, Recall, F1-score hoặc khẳng định hiệu quả dự đoán. Tất cả kết quả định lượng hiện có là kết quả mô tả, kiểm tra và tích hợp dữ liệu.

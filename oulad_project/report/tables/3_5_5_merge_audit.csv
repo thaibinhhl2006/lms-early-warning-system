@@ -1,0 +1,14 @@
+﻿Bước ghép,Số bản ghi trước,Số bản ghi sau,Số bản ghi liên kết được,Số bản ghi không liên kết được,Tỷ lệ liên kết (%)
+studentInfo + studentRegistration,32593,32593,32593,0,100.0
++ courses,32593,32593,32593,0,100.0
+studentAssessment + assessments,173912,173912,173912,0,100.0
+Tuần 4: + assessment_features,27528,27528,27528,0,100.0
+Tuần 4: + vle_features,27528,27528,27528,0,100.0
+Tuần 8: + assessment_features,26516,26516,26516,0,100.0
+Tuần 8: + vle_features,26516,26516,26516,0,100.0
+Tuần 12: + assessment_features,25722,25722,25722,0,100.0
+Tuần 12: + vle_features,25722,25722,25722,0,100.0
+Tuần 16: + assessment_features,24932,24932,24932,0,100.0
+Tuần 16: + vle_features,24932,24932,24932,0,100.0
+Tuần 24: + assessment_features,23562,23562,23562,0,100.0
+Tuần 24: + vle_features,23562,23562,23562,0,100.0

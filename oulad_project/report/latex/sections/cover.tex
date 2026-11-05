@@ -1,0 +1,34 @@
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[Navy] (current page.north west) rectangle ([yshift=-8mm]current page.north east);
+  \fill[Teal] ([xshift=18mm,yshift=-36mm]current page.north west) rectangle ++(2.5mm,-35mm);
+\end{tikzpicture}
+\vspace*{12mm}
+{\sffamily\color{Teal}\large \Institution\par}
+\vspace{22mm}
+{\sffamily\bfseries\color{Navy}\fontsize{23}{29}\selectfont BÁO CÁO TIẾN ĐỘ\\TUẦN 3\par}
+\vspace{10mm}
+{\sffamily\bfseries\color{Navy}\fontsize{16}{22}\selectfont
+RÀ SOÁT VÀ HOÀN THIỆN QUY TRÌNH\\
+KHÁM PHÁ, TIỀN XỬ LÝ VÀ\\
+TÍCH HỢP DỮ LIỆU OULAD\par}
+\vspace{7mm}
+{\large\itshape Bản cập nhật theo góp ý của giảng viên hướng dẫn\par}
+\vspace{8mm}
+{\color{Teal}\rule{.22\linewidth}{1.3pt}\par}
+\vspace{8mm}
+\textbf{Tên đề tài}\par
+{\large \ProjectTitle\par}
+\vfill
+\begin{tabularx}{\linewidth}{@{}p{4.1cm}Y@{}}
+\toprule
+Sinh viên thực hiện & \StudentName \\
+Mã số sinh viên & \StudentID \\
+Giảng viên hướng dẫn & \AdvisorName \\
+Thời gian thực hiện & \ReportPeriod \\
+\bottomrule
+\end{tabularx}
+\vspace{10mm}
+{\small\color{black!60}Phạm vi: khám phá, đánh giá, tiền xử lý và tích hợp dữ liệu.\\Chưa thực nghiệm mô hình dự đoán.\par}
+\end{titlepage}

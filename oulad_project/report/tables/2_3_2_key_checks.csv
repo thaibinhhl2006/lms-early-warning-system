@@ -1,4 +1,4 @@
-﻿Bảng,Khóa kỳ vọng,Số dòng,Dòng thiếu thành phần khóa,Dòng thuộc nhóm trùng khóa,Tỷ lệ dòng thuộc nhóm trùng khóa (%)
+﻿Bảng dữ liệu,Khóa kỳ vọng,Số bản ghi,Số bản ghi thiếu thành phần khóa,Số bản ghi thuộc nhóm trùng khóa,Tỷ lệ bản ghi thuộc nhóm trùng khóa (%)
 courses,code_module + code_presentation,22,0,0,0.0
 assessments,id_assessment,206,0,0,0.0
 studentInfo,code_module + code_presentation + id_student,32593,0,0,0.0

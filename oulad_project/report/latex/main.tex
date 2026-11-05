@@ -1,0 +1,22 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper,oneside]{report}
+\input{preamble}
+\input{metadata}
+\input{generated/metrics}
+
+\begin{document}
+\input{sections/cover}
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\input{sections/progress}
+\setcounter{chapter}{1}
+\input{sections/chapter2}
+\input{sections/chapter3}
+\input{sections/conclusion}
+\clearpage
+\printbibliography[heading=bibintoc,title={Tài liệu tham khảo}]
+\appendix
+\input{sections/appendix}
+\end{document}

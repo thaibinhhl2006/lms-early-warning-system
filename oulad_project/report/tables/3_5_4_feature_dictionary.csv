@@ -1,0 +1,24 @@
+﻿Đặc trưng đầu vào (X),Nguồn,Định nghĩa,Ý nghĩa giá trị thiếu
+gender,student_base,Giới tính,Không chấp nhận NA
+region,student_base,Vùng cư trú,Không chấp nhận NA
+highest_education,student_base,Trình độ học vấn cao nhất,Không chấp nhận NA
+imd_band,student_base,Unknown cho thiếu; nhóm IMD thống nhất hậu tố %,Không chấp nhận NA
+age_band,student_base,Nhóm tuổi,Không chấp nhận NA
+num_of_prev_attempts,student_base,Số lần học trước,Không chấp nhận NA
+studied_credits,student_base,Số tín chỉ đang học,Không chấp nhận NA
+disability,student_base,Khai báo khuyết tật,Không chấp nhận NA
+imd_band_missing,student_base,"Cờ thiếu IMD ban đầu; gán cố định, không học từ y",Không chấp nhận NA
+date_registration,student_base,Ngày đăng ký đã biết và không sau cutoff,Không chấp nhận NA
+module_presentation_length,student_base,Thời lượng dự kiến của đợt học,Không chấp nhận NA
+n_submissions,studentAssessment + assessments,Số bài TMA/CMA không banked nộp trong 0..cutoff,Không chấp nhận NA
+n_submissions_with_due_date,studentAssessment + assessments,Số bài nộp trên có hạn xác định và hạn <= cutoff,Không chấp nhận NA
+n_late_submissions,studentAssessment + assessments,"Số bài có ngày nộp > hạn, trong nhóm có hạn đến cutoff",Không chấp nhận NA
+late_submission_rate,studentAssessment + assessments,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0,Không có bài đủ điều kiện xét tỷ lệ
+total_clicks,studentVle + vle,"Tổng click ghi nhận trong 0..cutoff, giữ log trùng chưa xác minh",Không chấp nhận NA
+active_days,studentVle + vle,Số ngày khác nhau có bản ghi VLE trong 0..cutoff,Không chấp nhận NA
+resource_types_used,studentVle + vle,Số activity_type khác nhau đã có tương tác trong cửa sổ,Không chấp nhận NA
+avg_clicks_per_day,studentVle + vle,"total_clicks / (cutoff+1), gồm ngày không có log",Không chấp nhận NA
+clicks_oucontent,studentVle + vle,Tổng click của loại oucontent trong 0..cutoff,Không chấp nhận NA
+clicks_forumng,studentVle + vle,Tổng click của loại forumng trong 0..cutoff,Không chấp nhận NA
+clicks_quiz,studentVle + vle,Tổng click của loại quiz trong 0..cutoff,Không chấp nhận NA
+clicks_resource,studentVle + vle,Tổng click của loại resource trong 0..cutoff,Không chấp nhận NA

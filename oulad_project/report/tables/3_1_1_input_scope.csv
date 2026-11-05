@@ -1,0 +1,8 @@
+﻿Bảng dữ liệu,Nội dung bảng,Số bản ghi,Vai trò ở Chương 3
+courses,"Học phần, đợt mở lớp và thời lượng",22,Thời lượng đợt học
+assessments,"Bài đánh giá, hạn nộp và trọng số",206,Loại bài và hạn nộp
+studentInfo,Thông tin sinh viên và kết quả học tập,32593,Bảng cơ sở; final_result là nhãn
+studentRegistration,Ngày đăng ký và ngày rút học phần,32593,Điều kiện còn tham gia tại cutoff; ngày đăng ký
+studentAssessment,Ngày nộp bài và điểm đánh giá,173912,Sự kiện bài nộp; không dùng score
+vle,"Tài nguyên, loại hoạt động và lịch tuần",6364,Ánh xạ tài nguyên sang activity_type
+studentVle,Nhật ký tương tác và số lượt nhấp,10655280,Tổng hợp tương tác theo ngày và cutoff

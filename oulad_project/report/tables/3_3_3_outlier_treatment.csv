@@ -1,0 +1,4 @@
+﻿Bảng dữ liệu,Cột dữ liệu,Q1,Q3,IQR,Ngưỡng dưới,Ngưỡng trên,Số giá trị dưới ngưỡng,Số giá trị trên ngưỡng,Số giá trị không thiếu,Tỷ lệ ứng viên ngoại lai (%),Phương án xử lý,Số giá trị bị sửa hoặc loại
+studentInfo,studied_credits,60.0,120.0,60.0,-30.0,210.0,0,350,32593,1.0738502132359709,Giữ nguyên; chưa có bằng chứng giá trị sai,0
+studentInfo,num_of_prev_attempts,0.0,0.0,0.0,0.0,0.0,0,4172,32593,12.800294541772773,Giữ nguyên; chưa có bằng chứng giá trị sai,0
+studentVle,sum_click,1.0,3.0,2.0,-2.0,6.0,0,1314646,10655280,12.337977040490724,Giữ nguyên; chưa có bằng chứng giá trị sai,0

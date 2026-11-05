@@ -1,4 +1,4 @@
-﻿Bảng,Cột,Số quan sát có giá trị,Nhỏ nhất,Q1,Trung vị,Trung bình,Q3,P95,P99,Lớn nhất,Độ lệch chuẩn
+﻿Bảng dữ liệu,Cột dữ liệu,Số giá trị không thiếu,Nhỏ nhất,Q1,Trung vị,Trung bình,Q3,P95,P99,Lớn nhất,Độ lệch chuẩn
 courses,module_presentation_length,22,234.0,241.0,261.5,255.54545454545453,268.0,269.0,269.0,269.0,13.654677456835678
 assessments,date,195,12.0,71.0,152.0,145.00512820512822,222.0,240.29999999999998,241.0,261.0,76.00111891714974
 assessments,weight,206,0.0,0.0,12.5,20.87378640776699,24.25,100.0,100.0,100.0,30.384223959041318

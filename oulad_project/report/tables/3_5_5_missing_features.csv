@@ -1,0 +1,6 @@
+﻿Mốc dự đoán (tuần),Cột dữ liệu,Số giá trị thiếu,Tỷ lệ giá trị thiếu (%),Lý do
+4,late_submission_rate,8051,29.24658529497239,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0
+8,late_submission_rate,4497,16.959571579423745,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0
+12,late_submission_rate,2171,8.440245704066557,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0
+16,late_submission_rate,1961,7.865393871330018,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0
+24,late_submission_rate,1666,7.070707070707071,Số bài muộn / số bài có hạn đến cutoff; NA nếu mẫu số 0

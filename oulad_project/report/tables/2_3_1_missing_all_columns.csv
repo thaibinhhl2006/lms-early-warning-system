@@ -1,4 +1,4 @@
-﻿Bảng,Cột,Số dòng của bảng,Số giá trị thiếu,Tỷ lệ thiếu (%)
+﻿Bảng dữ liệu,Cột dữ liệu,Tổng số bản ghi,Số giá trị thiếu,Tỷ lệ giá trị thiếu (%)
 courses,code_module,22,0,0.0
 courses,code_presentation,22,0,0.0
 courses,module_presentation_length,22,0,0.0

@@ -1,0 +1,338 @@
+{
+  "sources": [
+    {
+      "path": "data/preprocessed/feature_manifest.json",
+      "sha256": "85a514f56f4383a4ee9fb9eb65d25bdc5a2b5f79337231ef7855842859a08133",
+      "bytes": 6336
+    },
+    {
+      "path": "data/preprocessed/oulad_week12.csv",
+      "sha256": "e8d821611c3e90d71a03857cf33a0ec9ace11136a76f4291a9fb2d89bae765fc",
+      "bytes": 3823423
+    },
+    {
+      "path": "data/preprocessed/oulad_week16.csv",
+      "sha256": "3ae930a2e782860f7a6bc3cd0bd87277184b61ebec72d2e11586e1596d7b32ba",
+      "bytes": 3686646
+    },
+    {
+      "path": "data/preprocessed/oulad_week24.csv",
+      "sha256": "5b0982057efed61f5ce0edcc6411d8f386181a75f3bd685e6644dc3cddbbaec6",
+      "bytes": 3541655
+    },
+    {
+      "path": "data/preprocessed/oulad_week4.csv",
+      "sha256": "8a523de9e50b94b6ed429de2e39a51f916dc820c20534f1710e7484905be521a",
+      "bytes": 3884779
+    },
+    {
+      "path": "data/preprocessed/oulad_week8.csv",
+      "sha256": "b087f254adabbdd7e7f8ca3e58a12abe9b274c0a717976729e161de7261332c6",
+      "bytes": 3806581
+    },
+    {
+      "path": "data/raw/studentInfo.csv",
+      "sha256": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+      "bytes": 3461652
+    },
+    {
+      "path": "preprocess.ipynb",
+      "sha256": "d9a28ad3b62b9a9db95603bbc6e89bbf89bd69733ac75006471ddeabcdb8b230",
+      "bytes": 1338050
+    },
+    {
+      "path": "report/figures/2_1_2_relationships.png",
+      "sha256": "fe7e32a1181367cc708986464368f9b9fdf84d2684761ebc060bdab6c282c790",
+      "bytes": 156727
+    },
+    {
+      "path": "report/figures/2_2_2_final_result.png",
+      "sha256": "643b8d2d6e78a8c0031da9531f77b11224b883e2a3698a0f64f2853d00084f9f",
+      "bytes": 65501
+    },
+    {
+      "path": "report/figures/2_2_3_demographics.png",
+      "sha256": "6a5675734ccaa1891592bd5d178b0347da9ffafa990f2a01e5519cc5d2002356",
+      "bytes": 184334
+    },
+    {
+      "path": "report/figures/2_2_4_score_distribution.png",
+      "sha256": "65f93875638030543b87f9323657a53d3df0939798e8e59d746888d1e7760d19",
+      "bytes": 88628
+    },
+    {
+      "path": "report/figures/2_2_5_activity_type.png",
+      "sha256": "001fe78aee1482e36e398a8c384a63633d2624ec060b88b1d6a55f9540c9935a",
+      "bytes": 134629
+    },
+    {
+      "path": "report/figures/2_2_5_click_distribution.png",
+      "sha256": "094f45270b50a8430c33b30fec91b05a554725e8c27f7149eea0510edb7ff513",
+      "bytes": 67962
+    },
+    {
+      "path": "report/figures/2_2_5_vle_weekly_trend.png",
+      "sha256": "bce7643eb34b2715677dcca6b822fa6c163e6cb7300a0c0a77cafcaec09df78b",
+      "bytes": 103334
+    },
+    {
+      "path": "report/figures/3_6_3_median_daily_clicks_by_week.png",
+      "sha256": "f76b311d7d10b8b919849962859cb033fd666973a5ea7a97d01afba8b08cea73",
+      "bytes": 85784
+    },
+    {
+      "path": "report/figures/3_6_3_week8_interaction_distributions.png",
+      "sha256": "ce712063156598c2c93f871722260dacc4e004a0cb4f2610ecff25ad00d58d58",
+      "bytes": 104504
+    },
+    {
+      "path": "report/tables/2_1_1_table_size.csv",
+      "sha256": "541d935283c5ba555256f1f9f0dd1538654281e8dcf57bd5c8eb571b7304785a",
+      "bytes": 973
+    },
+    {
+      "path": "report/tables/2_1_2_key_catalog.csv",
+      "sha256": "ebb115e9e147876d5ef5a14deea335f540badd19842b6e2ed15f427449575565",
+      "bytes": 746
+    },
+    {
+      "path": "report/tables/2_2_1_schema_assessments.csv",
+      "sha256": "57efddc665f174d459fa24ee2f39bedbc5ab678849eb3cffcac80d69431efd3d",
+      "bytes": 870
+    },
+    {
+      "path": "report/tables/2_2_1_schema_courses.csv",
+      "sha256": "b295553ebfd8ab9b07e674f4bcc4e3b391cfab0e0f030973013bc5dcc7a7090e",
+      "bytes": 507
+    },
+    {
+      "path": "report/tables/2_2_1_schema_studentAssessment.csv",
+      "sha256": "56aa6c05b1685a3ce1db28d1747e8abe1eddd67269eb555d9a8578d01b3bbe8f",
+      "bytes": 638
+    },
+    {
+      "path": "report/tables/2_2_1_schema_studentInfo.csv",
+      "sha256": "f8445b289466bfb695c9a69467eabe525d0f21911ba6164c7743915b43eacce0",
+      "bytes": 1657
+    },
+    {
+      "path": "report/tables/2_2_1_schema_studentRegistration.csv",
+      "sha256": "c44a4b7ce50ba1960cf71629465451e89b2a02f02d31d4422b8c22dd30d31c15",
+      "bytes": 701
+    },
+    {
+      "path": "report/tables/2_2_1_schema_studentVle.csv",
+      "sha256": "d86c3e96c0f3b1ac4810b9c8dc1fdbaca6bb12755636a21ce4d1595a2df83b30",
+      "bytes": 736
+    },
+    {
+      "path": "report/tables/2_2_1_schema_vle.csv",
+      "sha256": "306f217421e05299572630498c6e9c74dcc7d4450ad76688a329a4c07aacdf28",
+      "bytes": 963
+    },
+    {
+      "path": "report/tables/2_2_2_final_result.csv",
+      "sha256": "9d11f97368f15e067ff1607a14db1fc88d588b1b4d14f447ba85878d95e5f9a9",
+      "bytes": 191
+    },
+    {
+      "path": "report/tables/2_2_3_demographics.csv",
+      "sha256": "8d6c7e263ae107a234017b454213d81f918ad884896ff653bd0efa169d7d7baf",
+      "bytes": 1687
+    },
+    {
+      "path": "report/tables/2_2_4_score_by_type.csv",
+      "sha256": "200af82f916c3a656b148dd478048e1e27a2030aa0849ac2f3077420ae242845",
+      "bytes": 422
+    },
+    {
+      "path": "report/tables/2_2_4_score_summary.csv",
+      "sha256": "5500bf858b800c3f9cfe46dfddfcb91fd0df2b8db94a3d0ed2e8c874e564e176",
+      "bytes": 262
+    },
+    {
+      "path": "report/tables/2_2_5_activity_type.csv",
+      "sha256": "118a153dfe4e3032399e30975ed82226451714134326cbda59e38db85b2c7b77",
+      "bytes": 1850
+    },
+    {
+      "path": "report/tables/2_2_5_click_summary.csv",
+      "sha256": "de632faf9a276a3dd67c6ce9def7e3cf22c42700bf9bc365b9e85f6610718d27",
+      "bytes": 271
+    },
+    {
+      "path": "report/tables/2_2_5_vle_weekly_trend.csv",
+      "sha256": "56333122382aa409a953eb26c0d06fc7c0de3f82b5674c9a44d0697804c4bfd5",
+      "bytes": 1857
+    },
+    {
+      "path": "report/tables/2_3_1_assessment_date_context.csv",
+      "sha256": "b1111127d74395df6fd331cc342598304d3ae6344a618c025b042e7b49483cab",
+      "bytes": 214
+    },
+    {
+      "path": "report/tables/2_3_1_missing_all_columns.csv",
+      "sha256": "5eaa5d146500eddb21bbd5ab1ea792c000f15930713f4418b6e4356e02717278",
+      "bytes": 1863
+    },
+    {
+      "path": "report/tables/2_3_2_exact_duplicates.csv",
+      "sha256": "6fe607f1bb2fa3039ba80fd4967e6b640f72458df8ebb6371a0b747c42ebc78b",
+      "bytes": 420
+    },
+    {
+      "path": "report/tables/2_3_2_key_checks.csv",
+      "sha256": "91ff4cf6916888eec83cc9752c304ceb8706123c97a6b6c6bb2ef5bb99f9dbfd",
+      "bytes": 556
+    },
+    {
+      "path": "report/tables/2_3_3_invalid_values.csv",
+      "sha256": "a83db81c4952ded568b8ee33dffc9752c5e1f5a5b448ae831f08f5e53de34b88",
+      "bytes": 5288
+    },
+    {
+      "path": "report/tables/2_3_3_iqr_outliers.csv",
+      "sha256": "1a19b71030958479a6fa302a39dc3f984acf5b43f57e281332ce9331d9914c3d",
+      "bytes": 558
+    },
+    {
+      "path": "report/tables/2_3_4_consistency_context.csv",
+      "sha256": "42f8e8923ae3c6f58f56de0048f8907eab425343f984b63554d99e3e9b0ef1e3",
+      "bytes": 1467
+    },
+    {
+      "path": "report/tables/2_3_4_referential_integrity.csv",
+      "sha256": "c8228abafe3b955c6329d0550e17481c0109d52c94d4b3cc0b82143b92222eb7",
+      "bytes": 1199
+    },
+    {
+      "path": "report/tables/2_3_4_weights_by_course.csv",
+      "sha256": "ba261dddd62f50ac9214d44c976322a9a5a8f646afe81694f48793383a063ab3",
+      "bytes": 1641
+    },
+    {
+      "path": "report/tables/3_1_2_prediction_config.csv",
+      "sha256": "dd5ae3e6e6e41ec2abf080aff0fedb1d9f72b5fcdaf1a988031958b09aaae692",
+      "bytes": 130
+    },
+    {
+      "path": "report/tables/3_1_3_processing_plan.csv",
+      "sha256": "000eb306c20d3d42887f67f818639b17dc115082df85207ed1e7d6ad618e5a33",
+      "bytes": 2939
+    },
+    {
+      "path": "report/tables/3_2_4_missing_before_after.csv",
+      "sha256": "1cd5b612003152d88d3d1d0a5f3d239a46a2b3aca79c2d4500ddc6cc87e55782",
+      "bytes": 947
+    },
+    {
+      "path": "report/tables/3_3_1_duplicates_treatment.csv",
+      "sha256": "0a9147284552cd1455b25b21db91ad5c6a7a6f6308738360c2f2faab172f60cd",
+      "bytes": 681
+    },
+    {
+      "path": "report/tables/3_3_2_invalid_treatment.csv",
+      "sha256": "11d849540953d8739d8e9d67338babd3fa95ffe3ec397c869dc35f23b986e5e7",
+      "bytes": 696
+    },
+    {
+      "path": "report/tables/3_3_3_outlier_treatment.csv",
+      "sha256": "c78d13345ec72f1a2626d11fa762800038d02bbb6d545848e9f909ed2a8afd20",
+      "bytes": 709
+    },
+    {
+      "path": "report/tables/3_4_1_dtype_audit.csv",
+      "sha256": "b0f48d2c15182edd68abdf3af55df5b29883698d82b6a88585682490bb1a4813",
+      "bytes": 1667
+    },
+    {
+      "path": "report/tables/3_4_2_label_normalization.csv",
+      "sha256": "db8f0b1bb350530968704cc830792fcf9991110ecc4ec67958af3160b0da73e7",
+      "bytes": 270
+    },
+    {
+      "path": "report/tables/3_5_1_prediction_cohorts.csv",
+      "sha256": "a8688b31c3f3b9d2f5e61e0213f754dcf8b2f6ca78d40ce5b8eddf0fc4d40bf9",
+      "bytes": 400
+    },
+    {
+      "path": "report/tables/3_5_1_student_base.csv",
+      "sha256": "6cd75f8003800bda73d630b1241dc61754ebefd10ff5d94a8b402c0a0626a465",
+      "bytes": 147
+    },
+    {
+      "path": "report/tables/3_5_2_assessment_exclusions.csv",
+      "sha256": "33f3f75084a48c6d3676c7f4a0604569d7e7b60d646760901c708bd99398d3c9",
+      "bytes": 322
+    },
+    {
+      "path": "report/tables/3_5_2_assessment_features.csv",
+      "sha256": "3ef4d4bfc13e129f273cbd26dc9dba4eb51b341fa3766d0eb5801728541c7af2",
+      "bytes": 468
+    },
+    {
+      "path": "report/tables/3_5_3_vle_features.csv",
+      "sha256": "7c8a6f64c50b6b316bf93e8c4f59546300848bd4199d1937b2cfa7c29fe5a2c0",
+      "bytes": 408
+    },
+    {
+      "path": "report/tables/3_5_4_feature_dictionary.csv",
+      "sha256": "f058f8e483d53122049815a89507e878696b4cbefc4942b85994591317e037f5",
+      "bytes": 2570
+    },
+    {
+      "path": "report/tables/3_5_4_integration_summary.csv",
+      "sha256": "0a7b99d49ae3a8ba46409835002f5a811e0219c3bdf7b888529c502268cc112f",
+      "bytes": 445
+    },
+    {
+      "path": "report/tables/3_5_5_merge_audit.csv",
+      "sha256": "46048350b22b28a1d54c27dc74172b82eca29832ac65ac23399b5d36940a4bef",
+      "bytes": 887
+    },
+    {
+      "path": "report/tables/3_5_5_missing_features.csv",
+      "sha256": "b582301b34eef99af3263f23b362c0392efbbf96325ad07e1d39d64c49a1d291",
+      "bytes": 732
+    },
+    {
+      "path": "report/tables/3_6_1_future_invariance.csv",
+      "sha256": "06b018577dabf6a19c3fe86b9cf19f5f060d494e34d91a2d12a863287a566d1f",
+      "bytes": 323
+    },
+    {
+      "path": "report/tables/3_6_1_quality_checks.csv",
+      "sha256": "11df7d5ab94fac03d83ecf56f0e2168087b1a4e038f92133e44c6a471e878487",
+      "bytes": 927
+    },
+    {
+      "path": "report/tables/3_6_2_before_after.csv",
+      "sha256": "3338da06477110ef8c7ba1c445d8e80a01d94e996dc43ce991b26324634ff3d4",
+      "bytes": 581
+    },
+    {
+      "path": "report/tables/3_6_2_processing_changes.csv",
+      "sha256": "9aee3015397fba5e6f24f02bb4e40aba876c9752d0c4a510bbd4bf4d588ffac3",
+      "bytes": 230
+    },
+    {
+      "path": "report/tables/3_6_3_zero_submissions.csv",
+      "sha256": "d90f985f4905b664db963226bcd6902b079dbbf1e0cac2e9e6c0daae31a5a479",
+      "bytes": 320
+    },
+    {
+      "path": "report/tables/3_6_4_exports.csv",
+      "sha256": "a3a7e1e15c3c33fcdc4a593e00042aef918da50e7b25ae8808755ced98a573f7",
+      "bytes": 835
+    }
+  ],
+  "unique_students": 28785,
+  "feature_count": 23,
+  "median_daily_clicks": {
+    "4": 6.285714285714286,
+    "8": 5.410714285714286,
+    "12": 4.511904761904762,
+    "16": 4.125,
+    "24": 4.041666666666667
+  }
+}

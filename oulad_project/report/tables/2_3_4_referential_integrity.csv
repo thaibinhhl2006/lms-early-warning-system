@@ -1,4 +1,4 @@
-﻿Bảng con / phạm vi,Bảng cha,Khóa liên kết,Số dòng con,Khóa cha duy nhất và không thiếu,Dòng thiếu khóa con,Dòng không khớp,Tỷ lệ không khớp (%)
+﻿Bảng con / phạm vi,Bảng cha,Khóa liên kết,Số bản ghi bảng con,Khóa cha duy nhất và không thiếu,Số bản ghi thiếu khóa liên kết,Số bản ghi không liên kết được,Tỷ lệ không khớp (%)
 assessments,courses,code_module + code_presentation,206,True,0,0,0.0
 studentInfo,courses,code_module + code_presentation,32593,True,0,0,0.0
 studentRegistration,courses,code_module + code_presentation,32593,True,0,0,0.0

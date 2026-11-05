@@ -1,0 +1,31 @@
+\chapter{Đối chiếu đặc trưng và nguồn dữ liệu}
+\label{app:features}
+
+\section{Danh sách 23 đặc trưng đầu vào ban đầu}
+Bảng~\ref{tab:features} dùng cùng danh sách \code{FEATURE_COLUMNS} trong notebook. Nguồn được ghi theo bảng gốc để không trộn tên bảng trung gian với tên dữ liệu đầu vào. Các thuộc tính đã chọn chưa được mã hóa hoặc lựa chọn tối ưu bằng thực nghiệm.
+
+\begin{longtable}{@{}p{.25\linewidth}p{.20\linewidth}p{.49\linewidth}@{}}
+\caption{Nguồn và định nghĩa bộ đặc trưng đầu vào ứng viên.}\label{tab:features}\\
+\toprule
+\textbf{Đặc trưng} & \textbf{Nguồn gốc} & \textbf{Loại hình thành và định nghĩa} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small Bảng~\ref{tab:features} (tiếp theo)}\\
+\toprule
+\textbf{Đặc trưng} & \textbf{Nguồn gốc} & \textbf{Loại hình thành và định nghĩa} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{\small Còn tiếp ở trang sau}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\input{generated/features_rows}
+\end{longtable}
+
+\section{Đường dẫn và khả năng đối chiếu}
+Nguồn số liệu chính là \code{preprocess.ipynb}, các CSV trong \code{report/tables/}, hình trong \code{report/figures/} và năm tệp theo tuần trong \code{data/preprocessed/}. Tên trường kỹ thuật trong dữ liệu mô hình được giữ nguyên; tên cột báo cáo được trình bày bằng tiếng Việt.
+
+Các bảng chọn lọc và giá trị định lượng trong báo cáo được tạo lại bằng \code{scripts/prepare_tables.py}. Tệp \code{source_manifest.json} lưu danh sách nguồn và SHA-256 để đối chiếu phiên bản. Hướng dẫn biên dịch, danh sách hình/bảng sử dụng và các giới hạn xác minh được ghi trong \code{README.md}, \code{ASSETS.md} và \code{output/validation.json} của bộ mã nguồn báo cáo.
+
+Mã sinh viên trong dữ liệu chỉ là mã định danh đã ẩn danh. Thông tin tác giả và giảng viên trên bìa cần được người thực hiện điền trong \code{metadata.tex}; không lấy từ báo cáo tham khảo.

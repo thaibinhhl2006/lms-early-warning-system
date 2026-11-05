@@ -1,0 +1,3 @@
+﻿Quy tắc,Số giá trị thay đổi,Ý nghĩa
+Bỏ khoảng trắng đầu/cuối chuỗi,0,Không thay đổi nội dung nhãn
+Thống nhất hậu tố % của nhóm IMD,3516,10-20 được biểu diễn thành 10-20%; giữ nguyên nhóm khoảng và Unknown

@@ -15,6 +15,7 @@ Bảng,report/tables/2_2_4_score_summary.csv,Thống kê điểm trên toàn b�
 Bảng,report/tables/2_2_4_score_by_type.csv,Điểm và số bài nộp theo assessment_type
 Bảng,report/tables/2_2_5_click_summary.csv,Phân phối số click trên toàn bộ nhật ký VLE
 Bảng,report/tables/2_2_5_activity_type.csv,"Phân phối tài nguyên, bản ghi và click theo activity_type"
+Bảng,report/tables/2_2_5_vle_weekly_trend.csv,Tổng tương tác VLE theo tuần tương đối
 Bảng,report/tables/2_3_1_missing_all_columns.csv,Kiểm tra thiếu trên mọi cột của 7 bảng
 Bảng,report/tables/2_3_1_missing_by_table.csv,Thiếu dữ liệu theo bảng (đơn vị ô)
 Bảng,report/tables/2_3_1_assessment_date_context.csv,Ngữ cảnh thiếu hạn đánh giá theo loại bài
@@ -35,4 +36,5 @@ Hình,report/figures/2_2_3_demographics.png,Bốn phân phối nhân khẩu họ
 Hình,report/figures/2_2_4_score_distribution.png,Histogram điểm và boxplot theo loại đánh giá
 Hình,report/figures/2_2_5_click_distribution.png,Phân phối sum_click toàn bộ log
 Hình,report/figures/2_2_5_activity_type.png,Tỷ trọng tài nguyên và click theo activity_type
+Hình,report/figures/2_2_5_vle_weekly_trend.png,Xu hướng tổng click VLE theo tuần học
 Hình,report/figures/2_3_1_missing_values.png,Tỷ lệ thiếu theo cột

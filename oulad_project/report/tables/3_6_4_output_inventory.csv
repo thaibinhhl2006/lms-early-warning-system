@@ -1,0 +1,80 @@
+﻿Loại,Tệp,Nội dung
+Bảng báo cáo,report/tables/2_1_1_table_size.csv,Nội dung và quy mô 7 bảng OULAD
+Bảng báo cáo,report/tables/2_1_2_key_catalog.csv,Khóa kỳ vọng và đường liên kết
+Bảng báo cáo,report/tables/2_2_1_schema_courses.csv,Cấu trúc và miền giá trị – courses
+Bảng báo cáo,report/tables/2_2_1_schema_assessments.csv,Cấu trúc và miền giá trị – assessments
+Bảng báo cáo,report/tables/2_2_1_schema_studentInfo.csv,Cấu trúc và miền giá trị – studentInfo
+Bảng báo cáo,report/tables/2_2_1_schema_studentRegistration.csv,Cấu trúc và miền giá trị – studentRegistration
+Bảng báo cáo,report/tables/2_2_1_schema_studentAssessment.csv,Cấu trúc và miền giá trị – studentAssessment
+Bảng báo cáo,report/tables/2_2_1_schema_vle.csv,Cấu trúc và miền giá trị – vle
+Bảng báo cáo,report/tables/2_2_1_schema_studentVle.csv,Cấu trúc và miền giá trị – studentVle
+Bảng báo cáo,report/tables/2_2_1_numeric_summary.csv,Thống kê mô tả toàn bộ các cột định lượng và thời gian
+Bảng báo cáo,report/tables/2_2_2_final_result.csv,Phân phối final_result theo lượt học
+Bảng báo cáo,report/tables/2_2_3_demographics.csv,Phân phối sáu đặc trưng nhân khẩu học (theo lượt học)
+Bảng báo cáo,report/tables/2_2_4_score_summary.csv,Thống kê điểm trên toàn bộ bài nộp
+Bảng báo cáo,report/tables/2_2_4_score_by_type.csv,Điểm và số bài nộp theo assessment_type
+Bảng báo cáo,report/tables/2_2_5_click_summary.csv,Phân phối số click trên toàn bộ nhật ký VLE
+Bảng báo cáo,report/tables/2_2_5_activity_type.csv,"Phân phối tài nguyên, bản ghi và click theo activity_type"
+Bảng báo cáo,report/tables/2_2_5_vle_weekly_trend.csv,Tổng tương tác VLE theo tuần tương đối
+Bảng báo cáo,report/tables/2_3_1_missing_all_columns.csv,Kiểm tra thiếu trên mọi cột của 7 bảng
+Bảng báo cáo,report/tables/2_3_1_missing_by_table.csv,Thiếu dữ liệu theo bảng (đơn vị ô)
+Bảng báo cáo,report/tables/2_3_1_assessment_date_context.csv,Ngữ cảnh thiếu hạn đánh giá theo loại bài
+Bảng báo cáo,report/tables/2_3_2_exact_duplicates.csv,Kiểm tra bản ghi trùng lặp hoàn toàn trong 7 bảng
+Bảng báo cáo,report/tables/2_3_2_key_checks.csv,Kiểm tra khóa kỳ vọng của 6 bảng có khóa
+Bảng báo cáo,report/tables/2_3_3_invalid_values.csv,Kiểm tra miền hợp lệ (không bao gồm NA)
+Bảng báo cáo,report/tables/2_3_3_iqr_outliers.csv,Ứng viên ngoại lai theo quy tắc Tukey trên dữ liệu thô
+Bảng báo cáo,report/tables/2_3_4_referential_integrity.csv,Kiểm tra toàn vẹn quan hệ trên toàn bộ dữ liệu
+Bảng báo cáo,report/tables/2_3_4_consistency_context.csv,"Tính nhất quán thời gian, trạng thái và cách ghi nhãn"
+Bảng báo cáo,report/tables/2_3_4_weights_by_course.csv,Trọng số theo đợt học và nhóm đánh giá
+Bảng báo cáo,report/tables/2_4_1_quality_summary.csv,Tổng hợp kết quả đánh giá chất lượng dữ liệu thô
+Bảng báo cáo,report/tables/2_4_2_preprocessing_proposals.csv,Đề xuất tiền xử lý và những quyết định còn mở
+Bảng báo cáo,report/tables/2_4_2_source_integrity.csv,Đối chiếu SHA-256 của 7 CSV gốc và modeling.ipynb
+Bảng báo cáo,report/tables/2_4_2_output_inventory.csv,Danh mục bảng và hình đã xuất cho báo cáo
+Bảng báo cáo,report/tables/3_1_1_input_scope.csv,Vai trò của 7 bảng trong quy trình cảnh báo sớm
+Bảng báo cáo,report/tables/3_1_2_prediction_config.csv,Cấu hình chung của 5 mốc dự đoán
+Bảng báo cáo,report/tables/3_1_2_information_roles.csv,"Phân biệt điều kiện tham gia, nhãn và dữ liệu dùng cho X"
+Bảng báo cáo,report/tables/3_1_3_processing_plan.csv,Phương án xử lý dựa trên kết quả Chương 2
+Bảng báo cáo,report/tables/3_2_1_imd_missing.csv,Kết quả gán nhóm Unknown cho IMD thiếu
+Bảng báo cáo,report/tables/3_2_2_unknown_registration.csv,Các lượt học chưa xác định được thời điểm đăng ký
+Bảng báo cáo,report/tables/3_2_2_registration_policy.csv,Giữ ý nghĩa ngày đăng ký và ngày rút học phần
+Bảng báo cáo,report/tables/3_2_3_other_missing.csv,Quyết định giữ các giá trị thiếu không cần điền
+Bảng báo cáo,report/tables/3_2_4_missing_before_after.csv,So sánh giá trị thiếu trước và sau xử lý
+Bảng báo cáo,report/tables/3_3_1_duplicates_treatment.csv,Kết quả xử lý theo bằng chứng trùng lặp
+Bảng báo cáo,report/tables/3_3_2_invalid_treatment.csv,Đối chiếu vi phạm miền trước khi tạo đặc trưng
+Bảng báo cáo,report/tables/3_3_3_outlier_treatment.csv,Quyết định đối với các ứng viên ngoại lai đã phát hiện
+Bảng báo cáo,report/tables/3_4_1_dtype_audit.csv,Kiểu dữ liệu của các bảng làm việc
+Bảng báo cáo,report/tables/3_4_2_label_normalization.csv,Các thay đổi thực tế về cách ghi giá trị
+Bảng báo cáo,report/tables/3_5_1_student_base.csv,Kiểm tra bảng cơ sở sau hai phép ghép
+Bảng báo cáo,report/tables/3_5_1_prediction_cohorts.csv,Điều kiện tham gia cảnh báo tại 5 mốc
+Bảng báo cáo,report/tables/3_5_2_assessment_features.csv,Tổng hợp sự kiện bài nộp theo từng cửa sổ
+Bảng báo cáo,report/tables/3_5_2_assessment_exclusions.csv,Các nhóm bài nộp không được gộp tùy tiện
+Bảng báo cáo,report/tables/3_5_3_vle_features.csv,Kết quả tổng hợp VLE chính xác theo từng cutoff
+Bảng báo cáo,report/tables/3_5_4_feature_dictionary.csv,Danh sách đặc trưng đầu vào ban đầu
+Bảng báo cáo,report/tables/3_5_4_integration_summary.csv,Quy mô tập cảnh báo sau hợp nhất các nhóm đặc trưng
+Bảng báo cáo,report/tables/3_5_5_merge_audit.csv,Số dòng và tỷ lệ liên kết sau từng bước merge
+Bảng báo cáo,report/tables/3_5_5_missing_features.csv,Các giá trị thiếu còn lại sau ghép và ý nghĩa
+Bảng báo cáo,report/tables/3_6_1_future_invariance.csv,Kiểm tra bất biến khi chỉ thay đổi thông tin sau cutoff
+Bảng báo cáo,report/tables/3_6_1_quality_checks.csv,Kết quả kiểm tra chất lượng các tập dữ liệu theo mốc
+Bảng báo cáo,report/tables/3_6_2_before_after.csv,Quy mô trước và sau theo cùng đơn vị lượt học
+Bảng báo cáo,report/tables/3_6_2_processing_changes.csv,Nhật ký các thay đổi giá trị đã thực hiện
+Bảng báo cáo,report/tables/3_6_3_zero_submissions.csv,Lượt học chưa có bài nộp tại từng mốc dự đoán
+Bảng báo cáo,report/tables/3_6_4_exports.csv,Các CSV đã lưu và kiểm tra đọc lại thành công
+Bảng báo cáo,report/tables/3_6_4_source_integrity.csv,Xác nhận nguồn và notebook mô hình không bị thay đổi
+Bảng báo cáo,report/tables/3_6_4_output_inventory.csv,Danh mục đầu ra Chương 2 và Chương 3
+Hình,report/figures/2_1_2_relationships.png,Sơ đồ quan hệ giữa 7 bảng
+Hình,report/figures/2_2_2_final_result.png,Phân phối final_result
+Hình,report/figures/2_2_3_demographics.png,Bốn phân phối nhân khẩu học
+Hình,report/figures/2_2_4_score_distribution.png,Histogram điểm và boxplot theo loại đánh giá
+Hình,report/figures/2_2_5_click_distribution.png,Phân phối sum_click toàn bộ log
+Hình,report/figures/2_2_5_activity_type.png,Tỷ trọng tài nguyên và click theo activity_type
+Hình,report/figures/2_2_5_vle_weekly_trend.png,Xu hướng tổng click VLE theo tuần học
+Hình,report/figures/2_3_1_missing_values.png,Tỷ lệ thiếu theo cột
+Hình,report/figures/3_6_3_week8_interaction_distributions.png,Phân phối tổng click và ngày hoạt động theo lượt học tại tuần 8
+Hình,report/figures/3_6_3_median_daily_clicks_by_week.png,Trung vị avg_clicks_per_day tại 5 mốc dự đoán
+Dữ liệu,data/preprocessed/student_base.csv,Bảng cơ sở kiểm toán
+Dữ liệu,data/preprocessed/oulad_week4.csv,Tập cảnh báo sớm theo cutoff
+Dữ liệu,data/preprocessed/oulad_week8.csv,Tập cảnh báo sớm theo cutoff
+Dữ liệu,data/preprocessed/oulad_week12.csv,Tập cảnh báo sớm theo cutoff
+Dữ liệu,data/preprocessed/oulad_week16.csv,Tập cảnh báo sớm theo cutoff
+Dữ liệu,data/preprocessed/oulad_week24.csv,Tập cảnh báo sớm theo cutoff
+Cấu hình,data/preprocessed/feature_manifest.json,"Danh sách X, nhãn, ID và quy tắc khả dụng"

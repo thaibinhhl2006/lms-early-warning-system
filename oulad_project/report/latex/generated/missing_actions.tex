@@ -1,0 +1,14 @@
+% Generated from project outputs; see source_manifest.json.
+\begin{tabularx}{\linewidth}{@{}p{.24\linewidth}rp{.27\linewidth}Y@{}}
+\toprule
+\textbf{Thuộc tính} & \textbf{Số thiếu} & \textbf{Quyết định} & \textbf{Kết quả / cách sử dụng} \\
+\midrule
+\code{imd_band} & \num{1111} & Gán Unknown; thêm cờ thiếu. & Không còn NA; giữ nguyên lượt học. \\
+\code{date_registration} & \num{45} & Giữ NA trong bảng cơ sở. & Loại khỏi nhóm dự đoán ở cả năm mốc. \\
+\code{date_unregistration} & \num{22521} & Giữ NA; giả định chưa ghi nhận rút. & Vẫn xét chọn nếu đăng ký hợp lệ; không xác nhận trạng thái thực tế. \\
+\code{score} & \num{173} & Giữ NA; không dùng điểm trong X. & Không điền điểm 0 hoặc trung vị. \\
+\code{date} & \num{11} & Giữ NA; không suy diễn hạn nộp. & Không xét tỷ lệ muộn nếu thiếu hạn; Exam không thuộc nhóm bài nộp dùng cho X. \\
+\code{week_from} & \num{5243} & Giữ NA. & Dùng ngày tương tác thực tế để tổng hợp. \\
+\code{week_to} & \num{5243} & Giữ NA. & Dùng ngày tương tác thực tế để tổng hợp. \\
+\bottomrule
+\end{tabularx}

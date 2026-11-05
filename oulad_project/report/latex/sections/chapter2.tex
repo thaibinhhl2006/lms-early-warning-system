@@ -1,0 +1,145 @@
+\chapter{Khám phá và đánh giá dữ liệu OULAD}
+\label{chap:eda}
+
+\section{Tổng quan bộ dữ liệu OULAD}
+\subsection{Nội dung và quy mô bảy bảng dữ liệu}
+OULAD là bộ dữ liệu công khai của The Open University, gồm thông tin học phần, đăng ký, đánh giá học tập và tương tác trên môi trường học tập trực tuyến. Các bảng được liên kết bằng mã định danh; thời gian được biểu diễn tương đối theo ngày bắt đầu đợt học \autocite{kuzilek2017,ouladDataset}.
+
+Trên dữ liệu của dự án, có \NStudents{} sinh viên duy nhất nhưng \NEnrollments{} lượt học. Một lượt học được xác định bởi bộ ba sinh viên--học phần--đợt mở lớp; cùng một sinh viên có thể xuất hiện ở nhiều lượt học. Bảng~\ref{tab:dataset} trình bày quy mô theo đúng đơn vị của từng bảng.
+
+\begin{table}[tbp]
+\centering
+\caption{Nội dung và quy mô bảy bảng OULAD trong dự án.}
+\label{tab:dataset}
+\input{generated/dataset}
+\sourcenote{\code{2_1_1_table_size.csv}}
+\end{table}
+
+Tổng số bản ghi là \NTotalRecords{}, dung lượng CSV là \RawSizeMiB{} MiB. Bảng \code{studentVle} có \NVleRecords{} dòng, lớn hơn nhiều so với các bảng còn lại. Tổng \NRawColumns{} cột là phép cộng số cột vật lý của bảy bảng, có tính các tên lặp lại; đây không phải số đặc trưng độc lập hoặc số cột đầu vào mô hình.
+
+\subsection{Khóa và mối quan hệ giữa các bảng}
+Khóa lượt học là \code{code_module}, \code{code_presentation}, \code{id_student}. Chỉ dùng \code{id_student} sẽ không phân biệt được nhiều lần học của cùng một sinh viên. Bảng~\ref{tab:keys} nêu các khóa kỳ vọng; Hình~\ref{fig:relations} minh họa những đường liên kết chính.
+
+\begin{table}[tbp]
+\centering
+\caption{Khóa kỳ vọng theo đơn vị quan sát.}
+\label{tab:keys}
+\begin{tabularx}{\linewidth}{@{}p{4.2cm}Y@{}}
+\toprule
+\textbf{Bảng} & \textbf{Các thành phần khóa} \\
+\midrule
+\code{courses} & \code{code_module}, \code{code_presentation} \\
+\code{assessments} & \code{id_assessment} \\
+\code{studentInfo}, \code{studentRegistration} & \code{code_module}, \code{code_presentation}, \code{id_student} \\
+\code{studentAssessment} & \code{id_assessment}, \code{id_student} \\
+\code{vle} & \code{code_module}, \code{code_presentation}, \code{id_site} \\
+\code{studentVle} & Không mặc định khóa chính từ sinh viên--tài nguyên--ngày. \\
+\bottomrule
+\end{tabularx}
+\sourcenote{\code{2_1_2_key_catalog.csv}}
+\end{table}
+
+\reportfigure[.42]{2_1_2_relationships.png}{Các quan hệ chính giữa bảy bảng dữ liệu.}{fig:relations}
+Trong sơ đồ, module, presentation, student và site là cách viết ngắn cho các mã tương ứng. Bài nộp phải tra học phần và đợt học qua \code{assessments} trước khi đối chiếu với khóa lượt học. Nhật ký VLE đồng thời phải khớp lượt học và tài nguyên trong đúng học phần--đợt học. Sơ đồ biểu diễn quan hệ dữ liệu, chưa biểu diễn thứ tự tổng hợp đặc trưng.
+\FloatBarrier
+
+\section{Khám phá đặc điểm dữ liệu}
+\subsection{Cấu trúc, kiểu dữ liệu và miền giá trị}
+Notebook đã khảo sát toàn bộ bảy bảng, gồm đủ \NRawColumns{} cột vật lý. Mã sinh viên, bài đánh giá và tài nguyên mang vai trò định danh dù được đọc dưới dạng số. Các trường như giới tính, trình độ học vấn và loại hoạt động là phân loại; không tính trung bình các nhãn này.
+
+Điểm và trọng số được xem xét trong thang 0--100; số click, số lần học trước và số tín chỉ là các đại lượng đếm hoặc khối lượng học. Các cột ngày/tuần là thời gian tương đối. Giá trị ngày âm có thể phản ánh đăng ký hoặc hoạt động trước khi học phần bắt đầu. Kiểu Pandas và miền quan sát được ghi trong bảy bảng \code{2_2_1_schema_*.csv}; miền quan sát không tự động trở thành quy tắc hợp lệ.
+
+\subsection{Phân phối biến mục tiêu final\_result}
+Hình~\ref{fig:target} giữ nguyên bốn nhãn cuối kỳ. Tỷ lệ tính trên \NEnrollments{} lượt học, không trên số sinh viên duy nhất.
+\reportfigure[.33]{2_2_2_final_result.png}{Phân phối bốn nhãn kết quả cuối kỳ trên các lượt học.}{fig:target}
+\code{Pass} có \NPass{} lượt học (\PctPass), \code{Withdrawn} có \NWithdrawn{} (\PctWithdrawn), \code{Fail} có \NFail{} (\PctFail) và \code{Distinction} có \NDistinction{} (\PctDistinction). Các lớp có quy mô khác nhau; giai đoạn mô hình hóa cần đánh giá theo từng lớp, thay vì chỉ dùng một chỉ số tổng hợp. Chưa gộp nhãn nhị phân trong quy trình hiện tại.
+
+\subsection{Một số đặc trưng nhân khẩu học tiêu biểu}
+Hình~\ref{fig:demographics} trình bày giới tính, nhóm tuổi, trình độ học vấn và nhóm IMD. Đây là phân phối theo lượt học; một sinh viên tham gia nhiều lượt học có thể được tính nhiều lần.
+\reportfigure[.49]{2_2_3_demographics.png}{Các phân phối nhân khẩu học tiêu biểu trên dữ liệu thô.}{fig:demographics}
+Nhóm nam chiếm \PctMale; nhóm tuổi có nhãn \code{0-35} chiếm \PctYoung. Hai nhóm học vấn \code{A Level or Equivalent} và \code{Lower Than A Level} lần lượt chiếm \PctALevel{} và \PctLowerALevel. Nhãn IMD thiếu được hiển thị riêng trong EDA; những khác biệt về tỷ trọng này chưa chứng minh quan hệ nhân quả với kết quả học tập.
+
+\subsection{Phân phối điểm đánh giá học tập}
+Đơn vị phân tích ở Hình~\ref{fig:scores} là bài nộp. Điểm có trung vị \ScoreMedian{} và trung bình \ScoreMean; các giá trị thiếu không tham gia tính trung bình hoặc phân vị.
+\reportfigure[.30]{2_2_4_score_distribution.png}{Phân phối điểm bài nộp và so sánh theo loại đánh giá.}{fig:scores}
+Điểm trung bình của CMA, TMA và Exam lần lượt là \ScoreMeanCMA, \ScoreMeanTMA{} và \ScoreMeanExam. Không diễn giải trực tiếp đây là khác biệt năng lực vì loại bài, mức độ khó và phạm vi ghi nhận có thể khác nhau. Điểm vẫn hữu ích cho mô tả dữ liệu, nhưng chưa được dùng làm đặc trưng cảnh báo do thiếu thời điểm công bố điểm.
+
+\subsection{Phân phối và xu hướng tương tác VLE}
+Hình~\ref{fig:rawclicks} mô tả \code{sum_click} trên từng bản ghi gốc. Trung vị là \ClickMedian, trung bình \ClickMean, P95 là \ClickPninetyfive{} và giá trị lớn nhất là \ClickMax{} click/bản ghi. Khoảng cách giữa trung vị và các giá trị lớn cho thấy đuôi phải dài; click cao không tự động là lỗi.
+\reportfigure[.31]{2_2_5_click_distribution.png}{Phân phối số click trên bản ghi VLE gốc.}{fig:rawclicks}
+
+Phân bố tài nguyên và phân bố click có mẫu số khác nhau (Hình~\ref{fig:activities}). Tổng số click ghi nhận là \NClicks. \code{resource} chiếm \ResourceAssetPct{} tài nguyên nhưng chỉ \ResourceClickPct{} click; ngược lại, \code{oucontent} và \code{forumng} lần lượt chiếm \ContentClickPct{} và \ForumClickPct{} click. \code{quiz} chiếm \QuizClickPct. Số click phản ánh truy cập, không đo trực tiếp chất lượng tham gia hoặc mức độ hiểu bài.
+\reportfigure[.43]{2_2_5_activity_type.png}{Tỷ trọng tài nguyên và click theo loại hoạt động VLE.}{fig:activities}
+
+Hình~\ref{fig:weekly} cộng click theo tuần học từ ngày bắt đầu. Tuần \WeeklyPeak{} có tổng click cao nhất, đạt \WeeklyPeakClicks. Đây là khối lượng tương tác gộp của nhiều học phần và đợt học; số người còn tham gia và thời lượng học phần khác nhau nên không dùng đường này để kết luận tương tác bình quân của mỗi sinh viên tăng hay giảm.
+\reportfigure[.31]{2_2_5_vle_weekly_trend.png}{Xu hướng tổng click VLE theo tuần học trên dữ liệu thô.}{fig:weekly}
+\FloatBarrier
+
+\section{Đánh giá chất lượng dữ liệu}
+\subsection{Giá trị thiếu}
+Bảng~\ref{tab:missing-raw} liệt kê bảy thuộc tính có giá trị thiếu. Tỷ lệ ở mỗi dòng có mẫu số là số bản ghi của chính bảng đó; không cộng các tỷ lệ thành tỷ lệ thiếu chung.
+\begin{table}[tbp]
+\centering
+\caption{Các thuộc tính có giá trị thiếu trên dữ liệu thô.}
+\label{tab:missing-raw}
+\input{generated/missing_raw}
+\sourcenote{\code{2_3_1_missing_all_columns.csv}}
+\end{table}
+Thiếu ngày rút có thể mang ý nghĩa chưa ghi nhận rút, nhưng không đủ để khẳng định tất cả các trường hợp đều chưa rút thực tế. Toàn bộ 11 bài đánh giá thiếu hạn thuộc loại Exam; dự án không tự gán hạn thi bằng ngày kết thúc học phần. Tương tự, thiếu lịch tuần tài nguyên không đồng nghĩa với thiếu ngày tương tác thực tế. Điểm thiếu được phân biệt với điểm 0.
+
+\subsection{Bản ghi trùng lặp}
+Sáu bảng ngoài \code{studentVle} không có bản ghi trùng hoàn toàn. Nhật ký VLE có \NExactDuplicates{} dòng dư trùng ở toàn bộ sáu cột, chiếm \PctExactDuplicates. Dòng dư được tính từ lần xuất hiện thứ hai, khác với số dòng thuộc nhóm trùng hoặc số nhóm trùng. Kiểm tra thực hiện xuyên các khối đọc; phân vùng hash chỉ hỗ trợ so sánh, kết luận dựa trên giá trị gốc.
+
+Không phát hiện trùng hoặc thiếu thành phần khóa trong sáu bảng có khóa kỳ vọng. Riêng VLE chưa có bằng chứng nguồn để kết luận mọi dòng giống nhau là ghi lặp sai; do đó chưa xóa. Chính sách này cũng có nghĩa tổng click sau tích hợp vẫn bao gồm các dòng trùng chưa xác minh.
+
+\subsection{Giá trị không hợp lệ và ngoại lai}
+Bộ \NDomainRules{} phép kiểm tra miền không phát hiện vi phạm trên các giá trị không thiếu. Các kiểm tra gồm định dạng mã, số nguyên của ngày và số đếm, thang điểm/trọng số và tập nhãn phân loại. Kết quả này chỉ đúng theo những quy tắc đã áp dụng, không bảo đảm phát hiện mọi lỗi nghiệp vụ.
+
+Ngoại lai thống kê được rà soát riêng bằng ngưỡng Tukey \autocite{nistOutliers}:
+\[
+IQR=Q_3-Q_1,\qquad [L,U]=[Q_1-1{,}5IQR,\;Q_3+1{,}5IQR].
+\]
+\begin{table}[tbp]
+\centering
+\caption{Các giá trị bị đánh dấu theo ngưỡng Tukey trên dữ liệu thô.}
+\label{tab:outliers}
+\input{generated/outliers}
+\sourcenote{\code{2_3_3_iqr_outliers.csv}}
+\end{table}
+Bảng~\ref{tab:outliers} cho thấy ngay cả các giá trị hợp lệ cũng có thể vượt ngưỡng. Với số lần học trước, \(Q_1=Q_3=0\), nên mọi giá trị dương đều bị đánh dấu; đây không phải căn cứ loại nhóm đã từng học học phần. Điểm thấp trong khoảng 0--100 và click cao cũng chưa được xác nhận là sai.
+
+\subsection{Tính nhất quán và toàn vẹn quan hệ}
+Có \NRelationChecks{} hướng đối chiếu khóa ngoại, không có bản ghi con thiếu khóa hoặc không khớp; các khóa cha đều duy nhất và đầy đủ. Kiểm tra dùng đủ ngữ cảnh học phần--đợt học, không chỉ kiểm tra mã sinh viên có tồn tại toàn cục.
+
+Các trường hợp cần rà soát gồm \NStateMismatch{} lượt có ngày rút nhưng nhãn cuối kỳ khác \code{Withdrawn}, và \NWithdrawalMissingDate{} lượt có nhãn \code{Withdrawn} nhưng thiếu ngày rút. Có một ngày rút sau thời lượng học phần. Các trường hợp này được giữ để đối chiếu, chưa tự sửa trạng thái.
+
+Có \NPrecourseLogs{} log trước ngày bắt đầu (\PctPrecourseLogs), phù hợp với khả năng truy cập học liệu sớm; không xem ngày âm là lỗi mặc định. Tổng trọng số Exam của hai đợt CCC là 200 do mỗi đợt có hai bài Exam trọng số 100; ba đợt GGG có nhóm TMA/CMA tổng trọng số 0. Đây là dấu hiệu cần hiểu cách tổ chức đánh giá, không tự chuẩn hóa về 100.
+\FloatBarrier
+
+\section{Tổng hợp kết quả và đề xuất tiền xử lý}
+\subsection{Những vấn đề cần quyết định}
+Rà soát ở Chương~\ref{chap:eda} phân biệt ba nhóm: vi phạm rõ ràng theo quy tắc; bất thường chưa chứng minh sai; và giá trị thiếu cần diễn giải theo ngữ cảnh. Bảng~\ref{tab:decisions} kết nối phát hiện với phương án thực hiện ở Chương~\ref{chap:preprocess}; các số lượng giữa các dòng có thể giao nhau.
+
+\begin{table}[tbp]
+\centering
+\caption{Từ kết quả đánh giá đến phương án tiền xử lý.}
+\label{tab:decisions}
+\begin{tabularx}{\linewidth}{@{}p{4.2cm}p{3.1cm}Y@{}}
+\toprule
+\textbf{Phát hiện} & \textbf{Quy mô} & \textbf{Phương án được chọn} \\
+\midrule
+Thiếu nhóm IMD & \NImdUnknown{} giá trị & Nhóm Unknown và cờ thiếu; không xóa lượt học. \\
+Thiếu ngày đăng ký & \NUnknownRegistration{} lượt & Giữ ở cơ sở, không đưa vào nhóm dự đoán. \\
+Thiếu ngày rút, điểm, hạn và lịch tuần & Xem Bảng~\ref{tab:missing-raw} & Giữ thiếu; giới hạn cách sử dụng theo thời điểm và ý nghĩa thuộc tính. \\
+Log VLE trùng hoàn toàn & \NExactDuplicates{} dòng dư & Giữ nguyên khi chưa xác minh là lỗi. \\
+Ứng viên ngoại lai & Xem Bảng~\ref{tab:outliers} & Không cắt ngưỡng hoặc loại chỉ dựa vào Tukey. \\
+Nhãn IMD thiếu hậu tố \% & \NImdLabels{} giá trị & Thống nhất cách viết, không thay đổi nhóm thực tế. \\
+Vi phạm miền và khóa ngoại & 0 theo các kiểm tra & Giữ kiểm tra tự động trước khi tổng hợp và ghép. \\
+\bottomrule
+\end{tabularx}
+\sourcenote{các bảng đánh giá Chương 2 và \code{3_1_3_processing_plan.csv}}
+\end{table}
+
+\subsection{Nguyên tắc triển khai ở giai đoạn sau}
+Không điền thiếu bằng một giá trị chung cho mọi cột và không mặc định xóa mọi ngoại lai. Các thao tác dựa trên tham số học từ dữ liệu, như điền bằng trung vị hoặc chuẩn hóa thang đo, chưa được thực hiện; nếu dùng ở giai đoạn mô hình hóa, chỉ được học trên tập huấn luyện. Nhãn gốc được giữ nguyên và giới hạn thời gian phải được đặt trước khi tạo đặc trưng.
+\FloatBarrier

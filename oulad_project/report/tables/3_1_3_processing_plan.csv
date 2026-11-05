@@ -1,0 +1,12 @@
+﻿Bảng dữ liệu,Cột dữ liệu,Vấn đề Chương 2,Số lượng ảnh hưởng,Tỷ lệ (%),Phương án xử lý,Lý do
+vle,week_to,Giá trị thiếu,5243,82.3852922690132,Giữ NA; không dùng lịch tuần dự kiến làm đặc trưng,Có ngày tương tác thực tế nên vẫn tổng hợp được hoạt động mà không cần tuần kết thúc dự kiến.
+vle,week_from,Giá trị thiếu,5243,82.3852922690132,Giữ NA; không dùng lịch tuần dự kiến làm đặc trưng,Có ngày tương tác thực tế nên vẫn tổng hợp được hoạt động mà không cần tuần bắt đầu dự kiến.
+studentRegistration,date_unregistration,Giá trị thiếu,22521,69.09765900653514,Giữ trống ngày rút; vẫn đưa vào nhóm dự đoán nếu đã biết ngày đăng ký và ngày đó không sau mốc.,Không biết ngày rút nên chưa xác định được đã rút tại mốc hay chưa; tạm giữ lượt học theo giả định chưa ghi nhận rút.
+assessments,date,Giá trị thiếu,11,5.339805825242719,Giữ NA; bỏ khỏi mẫu số xét muộn khi hạn không xác định,Không biết hạn nộp nên không xác định được bài nộp đúng hạn hay muộn.
+studentInfo,imd_band,Giá trị thiếu,1111,3.4087073911576105,Nhóm Unknown và cờ imd_band_missing,Chưa biết nhóm IMD thực tế; dùng Unknown để giữ lượt học mà không tự đoán nhóm.
+studentRegistration,date_registration,Giá trị thiếu,45,0.13806645598748196,Giữ trống ngày đăng ký trong bảng cơ sở; không đưa lượt học vào các tập dự đoán theo tuần.,Không biết ngày đăng ký nên chưa xác định được đã đăng ký trước hoặc tại mốc dự đoán hay chưa.
+studentAssessment,score,Giá trị thiếu,173,0.09947559685358112,Giữ NA; không dùng bất kỳ score nào làm đặc trưng,Không biết khi nào điểm được công bố nên chưa chắc điểm đã có tại mốc dự đoán.
+studentVle,Toàn bộ cột,"Trùng hoàn toàn, chưa xác nhận trùng sai",787170,7.387605018357096,"Giữ nguyên log, kể cả dòng trùng",Các dòng giống nhau chưa đủ để kết luận bị ghi lặp do lỗi; cần xác minh trước khi xóa.
+studentInfo,studied_credits,Ứng viên ngoại lai Tukey,350,1.0738502132359709,Giữ nguyên giá trị,Giá trị cao hoặc ít gặp chưa có nghĩa là sai; chưa đủ căn cứ để sửa hoặc xóa.
+studentInfo,num_of_prev_attempts,Ứng viên ngoại lai Tukey,4172,12.800294541772773,Giữ nguyên giá trị,Giá trị cao hoặc ít gặp chưa có nghĩa là sai; chưa đủ căn cứ để sửa hoặc xóa.
+studentVle,sum_click,Ứng viên ngoại lai Tukey,1314646,12.337977040490724,Giữ nguyên giá trị,Giá trị cao hoặc ít gặp chưa có nghĩa là sai; chưa đủ căn cứ để sửa hoặc xóa.

@@ -1,0 +1,8 @@
+﻿Bảng dữ liệu,Số bản ghi,Số bản ghi trùng lặp dư,Số bản ghi sau,Số bản ghi trùng sai đã loại,Phương án xử lý
+courses,22,0,22,0,Không có trùng hoàn toàn để xử lý
+assessments,206,0,206,0,Không có trùng hoàn toàn để xử lý
+studentInfo,32593,0,32593,0,Không có trùng hoàn toàn để xử lý
+studentRegistration,32593,0,32593,0,Không có trùng hoàn toàn để xử lý
+studentAssessment,173912,0,173912,0,Không có trùng hoàn toàn để xử lý
+vle,6364,0,6364,0,Không có trùng hoàn toàn để xử lý
+studentVle,10655280,787170,10655280,0,Giữ log trùng chưa xác minh; không tự gộp/xóa

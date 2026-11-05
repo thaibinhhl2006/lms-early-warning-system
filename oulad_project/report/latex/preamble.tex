@@ -1,0 +1,79 @@
+\usepackage{iftex}
+\ifXeTeX\else
+  \PackageError{oulad-report}{Hay bien dich bang XeLaTeX}{Chon XeLaTeX trong Overleaf hoac dung latexmk -xelatex.}
+\fi
+\usepackage{fontspec}
+\IfFontExistsTF{TeX Gyre Termes}{\setmainfont{TeX Gyre Termes}}{\setmainfont{Times New Roman}}
+\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{\setsansfont{Arial}}
+\setmonofont{Latin Modern Mono}[Scale=MatchLowercase]
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\usepackage[margin=2.4cm,headheight=15pt,headsep=7mm,footskip=10mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.23}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\definecolor{Navy}{HTML}{17324D}
+\definecolor{Teal}{HTML}{147D84}
+\definecolor{Pale}{HTML}{F1F5F7}
+\definecolor{Ink}{HTML}{263440}
+\color{Ink}
+\usepackage{graphicx}
+\graphicspath{{../figures/}}
+\usepackage{booktabs,tabularx,longtable,array,ragged2e}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.16}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=Navy},labelsep=period,skip=7pt}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.6em,topsep=4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-separator={.},group-minimum-digits=4}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\sffamily\bfseries\color{Navy}}{\large CHƯƠNG \thechapter}{6pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{15pt}
+\titleformat{\section}{\sffamily\large\bfseries\color{Navy}}{\thesection}{.6em}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{Teal}}{\thesubsection}{.6em}{}
+\titlespacing*{\section}{0pt}{13pt}{6pt}
+\titlespacing*{\subsection}{0pt}{9pt}{4pt}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{Navy} OULAD / Báo cáo tiến độ tuần 3}
+\fancyhead[R]{\small\sffamily\color{Teal} Khám phá và tích hợp dữ liệu}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{.35pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+\usepackage[backend=biber,style=numeric,sorting=none,maxbibnames=5]{biblatex}
+\addbibresource{references.bib}
+\usepackage{xurl}
+\usepackage[unicode,colorlinks=true,linkcolor=Navy,citecolor=Teal,urlcolor=Teal]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={Báo cáo tiến độ tuần 3 -- Quy trình dữ liệu OULAD},pdfauthor={},pdfsubject={Khám phá, tiền xử lý và tích hợp dữ liệu}}
+\urlstyle{tt}
+\DeclareRobustCommand{\code}[1]{\nolinkurl{#1}}
+\newcommand{\sourcenote}[1]{\par\vspace{2pt}{\small\color{black!65}Nguồn: #1.}\par}
+\newcommand{\reportfigure}[4][.43]{%
+  \begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\linewidth,height=#1\textheight,keepaspectratio]{#2}
+    \caption{#3}\label{#4}
+  \end{figure}}
+\emergencystretch=2em
+\clubpenalty=10000
+\widowpenalty=10000
+\setlength{\textfloatsep}{12pt plus 3pt minus 2pt}
+\renewcommand{\topfraction}{.88}
+\renewcommand{\bottomfraction}{.78}
+\renewcommand{\textfraction}{.10}
+\renewcommand{\floatpagefraction}{.72}

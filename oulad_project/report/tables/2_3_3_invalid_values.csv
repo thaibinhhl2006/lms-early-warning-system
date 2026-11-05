@@ -1,4 +1,4 @@
-﻿Bảng,Cột,Quy tắc hợp lệ,Số giá trị đã kiểm tra,Số vi phạm,Tỷ lệ vi phạm (%)
+﻿Bảng dữ liệu,Cột dữ liệu,Quy tắc hợp lệ,Số giá trị đã kiểm tra,Số lượt vi phạm,Tỷ lệ vi phạm (%)
 courses,code_module,Mã gồm 3 chữ hoa,22,0,0.0
 courses,code_presentation,Mã năm 20xx và kỳ B/J,22,0,0.0
 courses,module_presentation_length,Số ngày nguyên dương,22,0,0.0
