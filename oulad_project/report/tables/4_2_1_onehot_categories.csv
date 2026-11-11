@@ -1,0 +1,7 @@
+﻿Đặc trưng,Có thứ tự,Số giá trị,Số cột sau One-Hot,"Giá trị ít nhất (tuần 8, huấn luyện)"
+gender,Không,2,1,F (9510)
+disability,Không,2,1,Y (1999)
+region,Không,13,13,Ireland (857)
+highest_education,Có,5,5,No Formal quals (194)
+age_band,Có,3,3,55<= (146)
+imd_band,Có,11,11,Unknown (808)

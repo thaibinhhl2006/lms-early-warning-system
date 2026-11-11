@@ -1,0 +1,24 @@
+﻿Đặc trưng,Phép biến đổi,Học tham số từ dữ liệu,Số cột đầu ra,Lý do
+gender,One-Hot,Không,1,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+region,One-Hot,Không,13,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+highest_education,One-Hot,Không,5,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+imd_band,One-Hot,Không,11,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+age_band,One-Hot,Không,3,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+num_of_prev_attempts,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+studied_credits,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+disability,One-Hot,Không,1,Biến phân loại; không áp đặt thứ tự hay khoảng cách giữa các mức
+imd_band_missing,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+date_registration,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+module_presentation_length,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+n_submissions,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+n_submissions_with_due_date,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+n_late_submissions,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+late_submission_rate,Điền trung vị + cờ thiếu,Có (trung vị),2,Thiếu có cấu trúc (chưa có bài để xét); trung vị học sau khi chia tập
+total_clicks,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị
+active_days,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+resource_types_used,Giữ nguyên,Không,1,Đã là số và không thiếu; chuẩn hóa thang đo quyết định cùng mô hình
+avg_clicks_per_day,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị
+clicks_oucontent,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị
+clicks_forumng,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị
+clicks_quiz,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị
+clicks_resource,log1p,Không,1,Phân phối đuôi phải dài; không loại bỏ giá trị

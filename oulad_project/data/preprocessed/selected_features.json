@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-07T11:58:40+07:00",
+  "source_features": "data/preprocessed/feature_manifest.json (23 feature_columns)",
+  "rules": {
+    "scope": "one list for all 5 cutoffs",
+    "drop_only": "identical columns or |Spearman| >= 0.95 at all 5 cutoffs (train split only)",
+    "low_information": "reported; removed only if MI < 0.001 at all 5 cutoffs and single-feature balanced accuracy ~ chance (0.25)"
+  },
+  "selected_features": [
+    "region",
+    "highest_education",
+    "imd_band",
+    "age_band",
+    "num_of_prev_attempts",
+    "studied_credits",
+    "disability",
+    "date_registration",
+    "module_presentation_length",
+    "n_submissions",
+    "n_submissions_with_due_date",
+    "n_late_submissions",
+    "late_submission_rate",
+    "total_clicks",
+    "active_days",
+    "resource_types_used",
+    "clicks_oucontent",
+    "clicks_forumng",
+    "clicks_quiz",
+    "clicks_resource"
+  ],
+  "dropped_features": {
+    "avg_clicks_per_day": "Trùng thông tin với total_clicks: Spearman = 1,000 ở cả 5 mốc vì avg_clicks_per_day = total_clicks / (ngày chốt + 1) với ngày chốt cố định trong mỗi mốc; giữ total_clicks vì đơn giản, dễ diễn giải hơn",
+    "imd_band_missing": "Trùng hoàn toàn với cột One-Hot imd_band_Unknown ở cả 5 mốc; thông tin thiếu IMD vẫn được giữ qua imd_band_Unknown",
+    "gender": "Gần như độc lập với nhãn ở mọi mốc: MI < 0,001 và balanced accuracy khi dùng riêng ≈ 0,256 (ngẫu nhiên 0,25), nên không mang thông tin dự đoán; đồng thời là thuộc tính nhạy cảm, loại bỏ giúp giảm rủi ro thiên lệch theo giới tính của hệ thống cảnh báo"
+  }
+}

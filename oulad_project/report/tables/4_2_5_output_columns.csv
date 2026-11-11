@@ -1,0 +1,53 @@
+﻿STT,Cột đầu ra,Đặc trưng gốc,Phép biến đổi
+1,gender_M,gender,One-Hot
+2,disability_Y,disability,One-Hot
+3,region_East Anglian Region,region,One-Hot
+4,region_East Midlands Region,region,One-Hot
+5,region_Ireland,region,One-Hot
+6,region_London Region,region,One-Hot
+7,region_North Region,region,One-Hot
+8,region_North Western Region,region,One-Hot
+9,region_Scotland,region,One-Hot
+10,region_South East Region,region,One-Hot
+11,region_South Region,region,One-Hot
+12,region_South West Region,region,One-Hot
+13,region_Wales,region,One-Hot
+14,region_West Midlands Region,region,One-Hot
+15,region_Yorkshire Region,region,One-Hot
+16,highest_education_No Formal quals,highest_education,One-Hot
+17,highest_education_Lower Than A Level,highest_education,One-Hot
+18,highest_education_A Level or Equivalent,highest_education,One-Hot
+19,highest_education_HE Qualification,highest_education,One-Hot
+20,highest_education_Post Graduate Qualification,highest_education,One-Hot
+21,age_band_0-35,age_band,One-Hot
+22,age_band_35-55,age_band,One-Hot
+23,age_band_55<=,age_band,One-Hot
+24,imd_band_0-10%,imd_band,One-Hot
+25,imd_band_10-20%,imd_band,One-Hot
+26,imd_band_20-30%,imd_band,One-Hot
+27,imd_band_30-40%,imd_band,One-Hot
+28,imd_band_40-50%,imd_band,One-Hot
+29,imd_band_50-60%,imd_band,One-Hot
+30,imd_band_60-70%,imd_band,One-Hot
+31,imd_band_70-80%,imd_band,One-Hot
+32,imd_band_80-90%,imd_band,One-Hot
+33,imd_band_90-100%,imd_band,One-Hot
+34,imd_band_Unknown,imd_band,One-Hot
+35,late_submission_rate,late_submission_rate,Điền trung vị (fit trên huấn luyện)
+36,missingindicator_late_submission_rate,late_submission_rate,Cờ thiếu (1 = ban đầu thiếu)
+37,total_clicks,total_clicks,log1p
+38,avg_clicks_per_day,avg_clicks_per_day,log1p
+39,clicks_oucontent,clicks_oucontent,log1p
+40,clicks_forumng,clicks_forumng,log1p
+41,clicks_quiz,clicks_quiz,log1p
+42,clicks_resource,clicks_resource,log1p
+43,num_of_prev_attempts,num_of_prev_attempts,Giữ nguyên
+44,studied_credits,studied_credits,Giữ nguyên
+45,imd_band_missing,imd_band_missing,Giữ nguyên
+46,date_registration,date_registration,Giữ nguyên
+47,module_presentation_length,module_presentation_length,Giữ nguyên
+48,n_submissions,n_submissions,Giữ nguyên
+49,n_submissions_with_due_date,n_submissions_with_due_date,Giữ nguyên
+50,n_late_submissions,n_late_submissions,Giữ nguyên
+51,active_days,active_days,Giữ nguyên
+52,resource_types_used,resource_types_used,Giữ nguyên

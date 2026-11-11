@@ -1,0 +1,5 @@
+﻿Thước đo,Vai trò,Ý nghĩa
+macro-F1,Thước đo chính,Trung bình F1 của 4 lớp; mỗi lớp cùng trọng số
+Balanced accuracy,Bổ sung,"Trung bình recall của 4 lớp; mức ngẫu nhiên 0,25"
+"Recall từng lớp (Fail, Withdrawn)",Bổ sung,Tỷ lệ sinh viên có nguy cơ được phát hiện
+Accuracy,Chỉ tham khảo,Dễ gây hiểu nhầm khi mất cân bằng

@@ -1,0 +1,10 @@
+﻿Đặc trưng 1,Đặc trưng 2,Tuần 4,Tuần 8,Tuần 12,Tuần 16,Tuần 24,"Số mốc |r| ≥ 0,95",Vượt ngưỡng ở cả 5 mốc
+total_clicks,avg_clicks_per_day,1.0,1.0,1.0,1.0,1.0,5,Có
+n_late_submissions,late_submission_rate,0.993,0.973,0.963,0.933,0.913,3,Không
+n_submissions_with_due_date,late_submission_missing,-0.965,-0.72,-0.513,-0.48,-0.452,1,Không
+n_submissions,n_submissions_with_due_date,0.918,0.92,0.822,0.881,0.818,0,Không
+total_clicks,active_days,0.872,0.895,0.9,0.902,0.909,0,Không
+active_days,avg_clicks_per_day,0.872,0.895,0.9,0.902,0.909,0,Không
+n_submissions,late_submission_missing,-0.89,-0.662,-0.498,-0.473,-0.447,0,Không
+total_clicks,clicks_forumng,0.802,0.819,0.803,0.798,0.79,0,Không
+avg_clicks_per_day,clicks_forumng,0.802,0.819,0.803,0.798,0.79,0,Không

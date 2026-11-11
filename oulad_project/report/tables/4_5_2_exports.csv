@@ -1,0 +1,11 @@
+﻿Tệp,Mốc dự đoán (tuần),Phần dữ liệu,Số lượt học,Số sinh viên,Số cột,Số đặc trưng,Dung lượng (MiB)
+data/modeling/week4_train.csv,4,train,22042,19879,27,20,2.59
+data/modeling/week4_test.csv,4,test,5486,4956,26,20,0.63
+data/modeling/week8_train.csv,8,train,21210,19290,27,20,2.53
+data/modeling/week8_test.csv,8,test,5306,4822,26,20,0.62
+data/modeling/week12_train.csv,12,train,20572,18800,27,20,2.53
+data/modeling/week12_test.csv,12,test,5150,4705,26,20,0.62
+data/modeling/week16_train.csv,16,train,19950,18381,27,20,2.46
+data/modeling/week16_test.csv,16,test,4982,4584,26,20,0.6
+data/modeling/week24_train.csv,24,train,18856,17546,27,20,2.35
+data/modeling/week24_test.csv,24,test,4706,4391,26,20,0.58

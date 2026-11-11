@@ -1,0 +1,24 @@
+﻿Đặc trưng,Nhóm,Tỷ lệ giá trị phổ biến nhất lớn nhất (%),MI nhỏ nhất,MI lớn nhất,Thứ hạng MI (tuần 8)
+gender,Thông tin nền,55.29,0.0003,0.0005,23
+region,Thông tin nền,11.53,0.0049,0.0055,17
+highest_education,Thông tin nền,44.57,0.0164,0.0179,12
+imd_band,Thông tin nền,11.06,0.0119,0.0133,13
+age_band,Thông tin nền,69.82,0.0033,0.0037,20
+num_of_prev_attempts,Thông tin nền,87.63,0.0093,0.0107,14
+studied_credits,Thông tin nền,54.04,0.005,0.0084,18
+disability,Thông tin nền,91.11,0.0013,0.0025,21
+imd_band_missing,Thông tin nền,96.21,0.0023,0.0026,21
+date_registration,Thông tin nền,3.52,0.0,0.0089,19
+module_presentation_length,Thông tin nền,21.7,0.008,0.0086,15
+n_submissions,Bài nộp,61.85,0.0162,0.1909,5
+n_submissions_with_due_date,Bài nộp,67.5,0.0125,0.1655,8
+n_late_submissions,Bài nộp,81.54,0.0044,0.0209,16
+late_submission_rate,Bài nộp,55.29,0.0178,0.1141,7
+total_clicks,VLE,4.5,0.043,0.1433,3
+active_days,VLE,5.64,0.0568,0.1627,1
+resource_types_used,VLE,20.46,0.0299,0.0798,6
+avg_clicks_per_day,VLE,4.5,0.05,0.1408,2
+clicks_oucontent,VLE,20.12,0.0239,0.0597,9
+clicks_forumng,VLE,20.76,0.0391,0.092,4
+clicks_quiz,VLE,53.5,0.0207,0.0558,10
+clicks_resource,VLE,17.76,0.0174,0.0644,11

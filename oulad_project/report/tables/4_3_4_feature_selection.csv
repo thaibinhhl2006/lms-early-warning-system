@@ -1,0 +1,24 @@
+﻿Đặc trưng,Nhóm,Quyết định,Lý do,MI (tuần 4–24),Ít biến động (giá trị phổ biến ≥ 85%),Đánh giá rò rỉ
+gender,Thông tin nền,Loại,"Gần như độc lập với nhãn ở mọi mốc: MI < 0,001 và balanced accuracy khi dùng riêng ≈ 0,256 (ngẫu nhiên 0,25), nên không mang thông tin dự đoán; đồng thời là thuộc tính nhạy cảm, loại bỏ giúp giảm rủi ro thiên lệch theo giới tính của hệ thống cảnh báo","0,0003–0,0005",Không,Chấp nhận theo giả định
+region,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0049–0,0055",Không,Chấp nhận theo giả định
+highest_education,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0164–0,0179",Không,Chấp nhận theo giả định
+imd_band,Thông tin nền,Giữ,Giữ; mức Unknown thay vai trò của imd_band_missing,"0,0119–0,0133",Không,Chấp nhận theo giả định
+age_band,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0033–0,0037",Không,Chấp nhận theo giả định
+num_of_prev_attempts,Thông tin nền,Giữ,"Phần lớn bằng 0 nhưng vẫn có liên quan với nhãn; ghi nhận, giữ","0,0093–0,0107",Có,Chấp nhận theo giả định
+studied_credits,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0050–0,0084",Không,Chấp nhận theo giả định
+disability,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0013–0,0025",Có,Chấp nhận theo giả định
+imd_band_missing,Thông tin nền,Loại,Trùng hoàn toàn với cột One-Hot imd_band_Unknown ở cả 5 mốc; thông tin thiếu IMD vẫn được giữ qua imd_band_Unknown,"0,0023–0,0026",Có,Chấp nhận theo giả định
+date_registration,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0000–0,0089",Không,Hợp lệ
+module_presentation_length,Thông tin nền,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0080–0,0086",Không,Chấp nhận theo giả định
+n_submissions,Bài nộp,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0162–0,1909",Không,Hợp lệ
+n_submissions_with_due_date,Bài nộp,Giữ,Tương quan cao với cờ thiếu của late_submission_rate chỉ ở tuần 4; giữ,"0,0125–0,1655",Không,Hợp lệ
+n_late_submissions,Bài nộp,Giữ,"Tương quan cao với late_submission_rate nhưng chỉ vượt 0,95 ở một phần các mốc; giữ theo quy tắc chung","0,0044–0,0209",Không,Hợp lệ
+late_submission_rate,Bài nộp,Giữ,Tương quan cao với n_late_submissions ở một phần các mốc; giữ theo quy tắc chung; điền trung vị + cờ thiếu (4.2.2),"0,0178–0,1141",Không,Hợp lệ
+total_clicks,VLE,Giữ,Giữ thay cho avg_clicks_per_day (trùng thông tin),"0,0430–0,1433",Không,Hợp lệ
+active_days,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0568–0,1627",Không,Hợp lệ
+resource_types_used,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0299–0,0798",Không,Hợp lệ
+avg_clicks_per_day,VLE,Loại,"Trùng thông tin với total_clicks: Spearman = 1,000 ở cả 5 mốc vì avg_clicks_per_day = total_clicks / (ngày chốt + 1) với ngày chốt cố định trong mỗi mốc; giữ total_clicks vì đơn giản, dễ diễn giải hơn","0,0500–0,1408",Không,Hợp lệ
+clicks_oucontent,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0239–0,0597",Không,Hợp lệ
+clicks_forumng,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0391–0,0920",Không,Hợp lệ
+clicks_quiz,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0207–0,0558",Không,Hợp lệ
+clicks_resource,VLE,Giữ,"Không trùng thông tin, không có dấu hiệu rò rỉ","0,0174–0,0644",Không,Hợp lệ

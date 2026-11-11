@@ -1,0 +1,4 @@
+﻿Phương án,Mã,Cách thực hiện,Ưu điểm,Hạn chế
+Không xử lý,none,Giữ nguyên phân phối lớp,Mốc so sánh; xác suất dự đoán phản ánh tần suất thực,Lớp ít (Withdrawn ở mốc muộn) dễ bị bỏ qua
+Trọng số lớp,class_weight,"class_weight='balanced' trong mô hình; w_c = n / (K·n_c), tính lại theo từng vòng","Không thay đổi dữ liệu, không có mẫu giả; nhanh; có sẵn trong nhiều mô hình",Mô hình không có class_weight phải truyền sample_weight; xác suất dự đoán bị lệch về lớp ít
+SMOTENC,smotenc,"Sinh mẫu cho 3 lớp không phải lớp lớn nhất đến bằng lớp lớn nhất (k = 5), chỉ trên phần huấn luyện của vòng CV",Phương pháp sinh mẫu phù hợp dữ liệu hỗn hợp; phổ biến trong nghiên cứu trên OULAD,"Mẫu giả không phải sinh viên thật, giá trị đếm không nguyên; xác suất bị lệch; chậm hơn; cần thư viện imbalanced-learn"

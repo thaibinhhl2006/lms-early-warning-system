@@ -1,0 +1,116 @@
+﻿Mốc dự đoán (tuần),Đặc trưng,Nhóm,Số giá trị khác nhau,Tỷ lệ giá trị phổ biến nhất (%),Xử lý như biến rời rạc,Mutual information
+4,gender,Thông tin nền,2,55.29,Có,0.0005
+4,region,Thông tin nền,13,11.45,Có,0.0049
+4,highest_education,Thông tin nền,5,43.93,Có,0.0164
+4,imd_band,Thông tin nền,11,11.06,Có,0.0119
+4,age_band,Thông tin nền,3,69.82,Có,0.0033
+4,num_of_prev_attempts,Thông tin nền,7,87.31,Có,0.0093
+4,studied_credits,Thông tin nền,48,53.31,Không,0.005
+4,disability,Thông tin nền,2,90.47,Có,0.0025
+4,imd_band_missing,Thông tin nền,2,96.21,Có,0.0023
+4,date_registration,Thông tin nền,294,3.45,Không,0.0
+4,module_presentation_length,Thông tin nền,7,21.7,Có,0.0086
+4,n_submissions,Bài nộp,5,61.85,Có,0.0162
+4,n_submissions_with_due_date,Bài nộp,3,67.5,Có,0.0125
+4,n_late_submissions,Bài nộp,3,81.54,Có,0.0044
+4,late_submission_rate,Bài nộp,4,52.29,Không,0.0178
+4,total_clicks,VLE,1516,4.5,Không,0.043
+4,active_days,VLE,29,5.64,Không,0.0568
+4,resource_types_used,VLE,15,16.83,Có,0.0299
+4,avg_clicks_per_day,VLE,1516,4.5,Không,0.05
+4,clicks_oucontent,VLE,566,20.12,Không,0.0281
+4,clicks_forumng,VLE,795,20.76,Không,0.0391
+4,clicks_quiz,VLE,544,53.5,Không,0.0207
+4,clicks_resource,VLE,121,17.76,Không,0.0174
+8,gender,Thông tin nền,2,55.16,Có,0.0005
+8,region,Thông tin nền,13,11.52,Có,0.0052
+8,highest_education,Thông tin nền,5,44.2,Có,0.0164
+8,imd_band,Thông tin nền,11,11.02,Có,0.0125
+8,age_band,Thông tin nền,3,69.74,Có,0.0034
+8,num_of_prev_attempts,Thông tin nền,7,87.35,Có,0.0098
+8,studied_credits,Thông tin nền,47,53.61,Không,0.0051
+8,disability,Thông tin nền,2,90.58,Có,0.0024
+8,imd_band_missing,Thông tin nền,2,96.19,Có,0.0024
+8,date_registration,Thông tin nền,297,3.47,Không,0.0036
+8,module_presentation_length,Thông tin nền,7,21.57,Có,0.008
+8,n_submissions,Bài nộp,6,45.67,Có,0.0418
+8,n_submissions_with_due_date,Bài nộp,5,55.53,Có,0.0346
+8,n_late_submissions,Bài nộp,5,72.26,Có,0.0056
+8,late_submission_rate,Bài nộp,7,55.29,Không,0.0349
+8,total_clicks,VLE,2246,2.94,Không,0.0633
+8,active_days,VLE,57,2.97,Không,0.0728
+8,resource_types_used,VLE,15,19.47,Có,0.0374
+8,avg_clicks_per_day,VLE,2246,2.94,Không,0.0644
+8,clicks_oucontent,VLE,928,15.82,Không,0.0286
+8,clicks_forumng,VLE,1080,15.58,Không,0.0428
+8,clicks_quiz,VLE,750,39.29,Không,0.0246
+8,clicks_resource,VLE,155,12.02,Không,0.0201
+12,gender,Thông tin nền,2,55.02,Có,0.0004
+12,region,Thông tin nền,13,11.53,Có,0.0053
+12,highest_education,Thông tin nền,5,44.34,Có,0.0167
+12,imd_band,Thông tin nền,11,11.03,Có,0.0126
+12,age_band,Thông tin nền,3,69.72,Có,0.0035
+12,num_of_prev_attempts,Thông tin nền,7,87.4,Có,0.0101
+12,studied_credits,Thông tin nền,46,53.88,Không,0.0068
+12,disability,Thông tin nền,2,90.72,Có,0.0021
+12,imd_band_missing,Thông tin nền,2,96.19,Có,0.0025
+12,date_registration,Thông tin nền,299,3.5,Không,0.0047
+12,module_presentation_length,Thông tin nền,7,21.32,Có,0.008
+12,n_submissions,Bài nộp,8,34.82,Có,0.0817
+12,n_submissions_with_due_date,Bài nộp,7,46.1,Có,0.0771
+12,n_late_submissions,Bài nộp,7,59.68,Có,0.0046
+12,late_submission_rate,Bài nộp,12,51.22,Không,0.087
+12,total_clicks,VLE,2657,2.53,Không,0.0779
+12,active_days,VLE,85,2.53,Không,0.0933
+12,resource_types_used,VLE,15,20.14,Có,0.0444
+12,avg_clicks_per_day,VLE,2657,2.53,Không,0.0816
+12,clicks_oucontent,VLE,1186,14.66,Không,0.0239
+12,clicks_forumng,VLE,1230,14.17,Không,0.0555
+12,clicks_quiz,VLE,889,35.73,Không,0.0306
+12,clicks_resource,VLE,184,10.66,Không,0.0244
+16,gender,Thông tin nền,2,54.91,Có,0.0003
+16,region,Thông tin nền,13,11.44,Có,0.0054
+16,highest_education,Thông tin nền,5,44.41,Có,0.0171
+16,imd_band,Thông tin nền,11,10.95,Có,0.013
+16,age_band,Thông tin nền,3,69.66,Có,0.0036
+16,num_of_prev_attempts,Thông tin nền,7,87.42,Có,0.0104
+16,studied_credits,Thông tin nền,46,54.02,Không,0.0084
+16,disability,Thông tin nền,2,90.88,Có,0.0017
+16,imd_band_missing,Thông tin nền,2,96.14,Có,0.0025
+16,date_registration,Thông tin nền,301,3.52,Không,0.0033
+16,module_presentation_length,Thông tin nền,7,21.3,Có,0.0082
+16,n_submissions,Bài nộp,10,23.7,Có,0.1097
+16,n_submissions_with_due_date,Bài nộp,7,34.72,Có,0.0847
+16,n_late_submissions,Bài nộp,7,55.71,Có,0.0185
+16,late_submission_rate,Bài nộp,12,47.81,Không,0.0958
+16,total_clicks,VLE,3108,2.37,Không,0.0928
+16,active_days,VLE,113,2.37,Không,0.1162
+16,resource_types_used,VLE,15,20.46,Có,0.0551
+16,avg_clicks_per_day,VLE,3108,2.37,Không,0.0943
+16,clicks_oucontent,VLE,1481,13.57,Không,0.0439
+16,clicks_forumng,VLE,1354,12.68,Không,0.0599
+16,clicks_quiz,VLE,1023,31.99,Không,0.048
+16,clicks_resource,VLE,218,9.22,Không,0.0329
+24,gender,Thông tin nền,2,54.77,Có,0.0003
+24,region,Thông tin nền,13,11.31,Có,0.0055
+24,highest_education,Thông tin nền,5,44.57,Có,0.0179
+24,imd_band,Thông tin nền,11,10.95,Có,0.0133
+24,age_band,Thông tin nền,3,69.57,Có,0.0037
+24,num_of_prev_attempts,Thông tin nền,7,87.63,Có,0.0107
+24,studied_credits,Thông tin nền,46,54.04,Không,0.0081
+24,disability,Thông tin nền,2,91.11,Có,0.0013
+24,imd_band_missing,Thông tin nền,2,96.11,Có,0.0026
+24,date_registration,Thông tin nền,300,3.49,Không,0.0089
+24,module_presentation_length,Thông tin nền,7,21.19,Có,0.008
+24,n_submissions,Bài nộp,13,22.35,Có,0.1909
+24,n_submissions_with_due_date,Bài nộp,11,31.75,Có,0.1655
+24,n_late_submissions,Bài nộp,10,48.82,Có,0.0209
+24,late_submission_rate,Bài nộp,28,41.77,Không,0.1141
+24,total_clicks,VLE,3932,2.26,Không,0.1433
+24,active_days,VLE,169,2.26,Không,0.1627
+24,resource_types_used,VLE,16,19.49,Có,0.0798
+24,avg_clicks_per_day,VLE,3932,2.26,Không,0.1408
+24,clicks_oucontent,VLE,1978,10.53,Không,0.0597
+24,clicks_forumng,VLE,1599,10.39,Không,0.092
+24,clicks_quiz,VLE,1332,29.87,Không,0.0558
+24,clicks_resource,VLE,263,6.88,Không,0.0644

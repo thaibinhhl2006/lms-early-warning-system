@@ -1,0 +1,24 @@
+﻿Đặc trưng,Nhóm,Thời điểm biết được,Căn cứ,Đánh giá định tính,Balanced accuracy đơn lẻ lớn nhất,Mốc đạt lớn nhất,"Nghi ngờ rò rỉ (≥ 0,90)"
+gender,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.257,4,Không
+region,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2726,8,Không
+highest_education,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.3137,24,Không
+imd_band,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2913,16,Không
+age_band,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2815,4,Không
+num_of_prev_attempts,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2826,16,Không
+studied_credits,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.29,4,Không
+disability,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2654,8,Không
+imd_band_missing,Thông tin nền,Thông tin khi đăng ký học phần,"Giả định có sẵn từ đầu đợt học; OULAD không có lịch sử cập nhật (Chương 3, 3.1.2)",Chấp nhận theo giả định,0.2611,4,Không
+date_registration,Thông tin nền,Ngày đăng ký ≤ ngày chốt,"Chỉ lượt học đã đăng ký đến ngày chốt được chọn (Chương 3, 3.1.2)",Hợp lệ,0.2624,4,Không
+module_presentation_length,Thông tin nền,Lịch đợt học dự kiến,Thời lượng được công bố trước khi đợt học bắt đầu; giả định như thông tin nền,Chấp nhận theo giả định,0.2944,24,Không
+n_submissions,Bài nộp,"Sự kiện nộp trong [0, t]","Chỉ TMA/CMA, không banked, hạn nộp xác định ≤ t; không dùng score; bất biến khi đổi dữ liệu sau mốc (Bảng 39)",Hợp lệ,0.4078,24,Không
+n_submissions_with_due_date,Bài nộp,"Sự kiện nộp trong [0, t]","Chỉ TMA/CMA, không banked, hạn nộp xác định ≤ t; không dùng score; bất biến khi đổi dữ liệu sau mốc (Bảng 39)",Hợp lệ,0.39,24,Không
+n_late_submissions,Bài nộp,"Sự kiện nộp trong [0, t]","Chỉ TMA/CMA, không banked, hạn nộp xác định ≤ t; không dùng score; bất biến khi đổi dữ liệu sau mốc (Bảng 39)",Hợp lệ,0.3128,24,Không
+late_submission_rate,Bài nộp,"Sự kiện nộp trong [0, t]","Chỉ TMA/CMA, không banked, hạn nộp xác định ≤ t; không dùng score; bất biến khi đổi dữ liệu sau mốc (Bảng 39)",Hợp lệ,0.3594,24,Không
+total_clicks,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3763,24,Không
+active_days,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.4038,24,Không
+resource_types_used,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3296,24,Không
+avg_clicks_per_day,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3763,24,Không
+clicks_oucontent,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3411,24,Không
+clicks_forumng,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3768,24,Không
+clicks_quiz,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.3599,24,Không
+clicks_resource,VLE,"Log tương tác trong [0, t]",Chỉ log có ngày ≤ t; bất biến khi đổi dữ liệu sau mốc (Bảng 39),Hợp lệ,0.342,24,Không

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-07T11:57:57+07:00",
+  "source": "data/preprocessed/student_base.csv",
+  "source_sha256": "7c873d695203f6ca8d0be0e413adb29215a901dbe8d2f401389cb9161ac48d9d",
+  "unit_of_assignment": "id_student",
+  "target_column": "final_result",
+  "target_labels": [
+    "Pass",
+    "Withdrawn",
+    "Fail",
+    "Distinction"
+  ],
+  "method": "StratifiedGroupKFold(stratify=final_result, groups=id_student)",
+  "test_selection": "first of 5 outer splits (~20% of enrolments)",
+  "n_folds": 5,
+  "random_state": 42,
+  "scikit_learn_version": "1.6.1",
+  "columns": {
+    "id_student": "student id",
+    "split": "train | test",
+    "fold": "1..5 for train students; empty for test students"
+  },
+  "usage": "Merge on id_student into oulad_weekN.csv. Never use split == test before the final evaluation. Fit every learned transformation inside the training folds only.",
+  "n_students": {
+    "total": 28785,
+    "train": 23023,
+    "test": 5762
+  },
+  "assignment_file": "data/preprocessed/split_assignment.csv",
+  "assignment_sha256": "603785c5dc5806e97cc7877b8c2bb43f19d49c1da7fbdb630c0586734dc8a80e"
+}

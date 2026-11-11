@@ -1,0 +1,6 @@
+﻿Mốc dự đoán (tuần),Số lượt học huấn luyện,Số giá trị thiếu,Tỷ lệ thiếu (%),Thiếu do chưa nộp bài nào,Thiếu dù đã nộp (chưa có hạn đến ngày chốt),Tỷ lệ bằng 0 trong số không thiếu (%),Trung vị nhỏ nhất theo vòng CV,Trung vị lớn nhất theo vòng CV
+4,22042,6448,29.25,6246,202,73.91,0.0,0.0
+8,21210,3599,16.97,3013,586,66.59,0.0,0.0
+12,20572,1740,8.46,1710,30,55.96,0.0,0.0
+16,19950,1575,7.89,1541,34,51.91,0.0,0.0
+24,18856,1329,7.05,1314,15,44.94,0.25,0.25

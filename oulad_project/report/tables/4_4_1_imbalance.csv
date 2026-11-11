@@ -1,0 +1,6 @@
+﻿Mốc dự đoán (tuần),Số lượt học huấn luyện,Pass,Withdrawn,Fail,Distinction,Pass (%),Withdrawn (%),Fail (%),Distinction (%),Lớp lớn nhất,Lớp nhỏ nhất,Chỉ số mất cân bằng,Chỉ số theo vòng CV (nhỏ nhất),Chỉ số theo vòng CV (lớn nhất)
+4,22042,9908,4110,5598,2426,44.95,18.65,25.4,11.01,Pass,Distinction,4.08,4.03,4.12
+8,21210,9910,3275,5599,2426,46.72,15.44,26.4,11.44,Pass,Distinction,4.08,4.04,4.12
+12,20572,9911,2633,5602,2426,48.18,12.8,27.23,11.79,Pass,Distinction,4.09,4.04,4.12
+16,19950,9912,2009,5603,2426,49.68,10.07,28.09,12.16,Pass,Withdrawn,4.93,4.88,5.02
+24,18856,9912,915,5603,2426,52.57,4.85,29.71,12.87,Pass,Withdrawn,10.83,10.7,11.13
